@@ -14,7 +14,9 @@ require "koneksi.php"
   </head>
   <body>
     <div class="container-fluid mt-4">
-  <div class="card" style="width: 50rem;">
+      <div class="row">
+      <div class="col-5">
+  <div class="card alignment-center" style="width: 50rem;" >
   <div class="card-body">
     <h5 class="card-title"><a href="data_barang.php">
   <i class="uil uil-step-backward-circle"></i>
@@ -26,10 +28,6 @@ require "koneksi.php"
       <label for="exampleFormControlInput1" class="form-label">Tambah Gambar</label>
       <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
       <section class="upload.php"></section>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Id Barang</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_id" placeholder="123xxxxxxx">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
@@ -68,6 +66,9 @@ require "koneksi.php"
     <button type="submit" class="btn btn-success mb-3" name="bsimpan">Simpan</button>
   </div>
   </div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </form>

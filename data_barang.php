@@ -52,9 +52,19 @@ require "koneksi.php"
         <div class="top">
             <i></i>
             <div class="search-box">
-                <i class="uil uil-search"></i>
                 <input type="text" name="tcari" value="<?= $_POST['tcari']?>" class="form-control" placeholder="Cari disini..">
+                <button type="submit" class="btn btn-success mb-3" name="bcari"><i class="uil uil-search"></i></button>
             </div>
+            <?php 
+            //persiapan menampilkan data
+            $no = 1;
+            if(isset($_POST['bcari'])){
+                $keyword = $_POST['tcari'];
+                $q = "SELECT * FROM test WHERE idBarang like '$keyword' or nama like '$keyword' order by idBarang asc";
+            }else{
+                $q =  "SELECT FROM test  order by idBarang asc";
+            }
+            ?>
             <div class="notifications">
                 <i class="uil uil-bell"></i>
             </div>
@@ -93,7 +103,7 @@ require "koneksi.php"
       while ($data = mysqli_fetch_array($tampil)):
       ?>
       <tr>
-        <td><img src="A1_Project/img/<?php echo $test->gambar;?>"width="70px"></td>
+        <td><img src="A1_Project/img/<?php echo $test= 'gambar';?>"width="70px"></td>
         <td><?= $data['id_barang']?></td>
         <td><?= $data['nama']?></td>
         <td><?= $data['warna']?></td>
@@ -103,11 +113,8 @@ require "koneksi.php"
         <td><?= $data['harga_jual']?></td>
         <td><?= $data['stok']?></td>
         <td><?= $data['deskripsi']?></td>
-       <td><a href="?page-data-barang&hapus-<?php echo $data['id_barang'];?>" class="btn-btndanger btn-sm">
-       <i class="uil uil-trash-alt"></i>
-       <a href="product.html">
-       <i class="uil uil-edit"></i>
-                    </a></td>
+       <td><a class="btn btn-light" href="test.php" name="bhapus" role="button"><i class="uil uil-trash-alt"></i></a>
+       <a class="btn btn-light" href="test.php" name="bhapus" role="button"><i class="uil uil-edit"></i></a></td>
       </tr>
       <?php endwhile; ?>
     </tbody>
