@@ -11,12 +11,20 @@ require "koneksi.php"
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css">
     <title>Data Barang</title>
+    <!-- <style type="text/css">
+       a button{
+        background-color: salmon;
+        color: $fff;
+        padding: 10px;
+        font-size: 12px;
+       }
+    </style> -->
   </head>
   <body>
     <nav>
         <div class="logo-name">
             <div class="logo-image">
-                <img src="TRST.png" width="200">
+                <img src="image/TRST.png" width="200">
             </div>
         </div>
         <div class="menu-items">
@@ -52,23 +60,14 @@ require "koneksi.php"
         <div class="top">
             <i></i>
             <div class="search-box">
-                <input type="text" name="tcari" value="<?= $_POST['tcari']?>" class="form-control" placeholder="Cari disini..">
-                <button type="submit" class="btn btn-success mb-3" name="bcari"><i class="uil uil-search"></i></button>
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Cari disini..">
             </div>
-            <?php 
-            //persiapan menampilkan data
-            $no = 1;
-            if(isset($_POST['bcari'])){
-                $keyword = $_POST['tcari'];
-                $q = "SELECT * FROM test WHERE idBarang like '$keyword' or nama like '$keyword' order by idBarang asc";
-            }else{
-                $q =  "SELECT FROM test  order by idBarang asc";
-            }
-            ?>
             <div class="notifications">
                 <i class="uil uil-bell"></i>
             </div>
-            <img src="lutpi1.png" alt="">
+            
+            <a href="login.php"><img src="image/lutpi.png" alt=""><span class="link-name">Toko Bang Lutfi</span></a>
         </div>
         <div class="row">
       <div class="col mb-3">
@@ -79,8 +78,11 @@ require "koneksi.php"
     <div class="mt-2">
       <div class="row-2">
       <div class="col">
-      <a class="btn btn-light" href="test.php" role="button"><i class="uil uil-plus-square"></i> Tambah Barang</a>
-  <table class="table">
+      <button href="test.php" type="button" class="btn btn-light"><i class="uil uil-plus-square"></i></button>
+      <a href="test.php">
+                        <span class="link-name">Upload Barang</span>
+                    </a>
+  <table class="table" action="action.php">
     <thead>
       <tr>
         <th scope="col">Gambar</th>
@@ -95,15 +97,14 @@ require "koneksi.php"
         <th scope="col">Deskripsi</th>
         <th scope="col"></th>
       </tr>
-   
     </thead>
     <tbody>
       <?php 
-      $tampil = mysqli_query($koneksi, "SELECT * FROM test order by id_barang asc");
+      $tampil = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang asc");
       while ($data = mysqli_fetch_array($tampil)):
       ?>
       <tr>
-        <td><img src="A1_Project/img/<?php echo $test= 'gambar';?>"width="70px"></td>
+        <td><img src="image/<?php echo $data['gambar'];?>"width="70px"></td>
         <td><?= $data['id_barang']?></td>
         <td><?= $data['nama']?></td>
         <td><?= $data['warna']?></td>
@@ -113,8 +114,11 @@ require "koneksi.php"
         <td><?= $data['harga_jual']?></td>
         <td><?= $data['stok']?></td>
         <td><?= $data['deskripsi']?></td>
-       <td><a class="btn btn-light" href="test.php" name="bhapus" role="button"><i class="uil uil-trash-alt"></i></a>
-       <a class="btn btn-light" href="test.php" name="bhapus" role="button"><i class="uil uil-edit"></i></a></td>
+        <!-- <td><button type="submit" class="btn btn-danger mb-3" name="hal">hapus</button></td> -->
+        <td>
+           <a href="edit_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bupdate" class="btn btn-warning mb-3">Edit</a> 
+           <a href="hapus_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bhapus"class="btn btn-danger mb-3">Hapus</a> 
+        </td>
       </tr>
       <?php endwhile; ?>
     </tbody>

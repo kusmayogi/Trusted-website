@@ -1,11 +1,8 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "trusted";
-$koneksi = mysqli_connect($server, $username, $password, $db);
+$koneksi = mysqli_connect("localhost","root","","appthrusted");
+if(mysqli_connect_errno()){
 
-if (!$koneksi){
-    die("koneksi g".mysqli_connect_error());
+    echo "koneksi gagal" . mysqli_connect_errno();
 }
+
 ?>

@@ -22,7 +22,7 @@ require "koneksi.php"
     <div class="container text-center">   
         <div class="row">
           <div class="col">
-          <img src="login.jpg" class="img-fluid" large="100">
+          <img src="image/login.jpg" class="img-fluid" large="100">
             <div class="container text-center">
                 <!-- <div class="col"> -->
                 <div class="row"> 
@@ -71,12 +71,12 @@ require "koneksi.php"
                         $_SESSION['logged_in'] = true;
 
                         echo "<script> alert('gagal');
-                        document.location='home.html';
+                        document.location='home.php';
                         </script>";
                     }
                     else{
                         echo "<script> alert('login berhasil');
-                        document.location='home.html';
+                        document.location='home_page.html';
                         </script>";
                     }
                         }

@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="	css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Trusted: Login</title>
-    <nav>
+    <title>Trusted: Home</title>
+  </head>
+  <body>
+  <nav>
         <div class="logo-name">
             <div class="logo-image">
                 <img src="TRST.png" width="200">
@@ -42,33 +44,45 @@
             </ul>
         </div>
     </nav>
-    <section class="dashboard">
-        <div class="top">
-            <i></i>
+        <div class="fixed-top">
+            <div class="mt-2">
+        <div class="row justify-content-end">
+            <div class="col-md-1 offset-md-5"><img src="Combined-Shape.png" class="img-fluid img-thumbnail " width="30"></div>
+            <div class="col-2"><a href="login.php"><img src="lutpi.png" alt=""><span class="link-name">Toko Bang Lutfi</span></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="fixed-top"> 
+          <div class="height-1">
+          <div class="mt-4">
+              <div class="row g-3"class="col-md-7 offset-md-5">
+            <div class="col-md-3 offset-md-2">
+              <div class="p-3 border bg-danger"><blockquote class="blockquote"><strong>Pesanan Hari Ini</strong>
+                <p class="card-text">2 Pesanan</p></div>
+            </div>
+            <div class="col-3">
+              <div class="p-3 border bg-danger"><blockquote class="blockquote"><strong>Pendapatan Hari Ini</strong>
+                <p class="card-text">Rp 200.000</p></div>
+            </div>
+            <div>
 
-            <div class="notifications">
-                <i class="uil uil-bell"></i>
             </div>
-            <img src="lutpi1.png" alt="">
-        </div>
-        <div class="row">
-        <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <div class="col-md-3 offset-md-2">
+              <div class="p-3 border bg-danger"><blockquote class="blockquote"><strong>Produk Terjual Bulan Ini</strong>
+                <p class="card-text">50 Item</p></div>
             </div>
-        </div>
-    </div>
-    <div class="col-md-3 offset-md-2">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <div class="col-3">
+              <div class="p-3 border bg-danger"><blockquote class="blockquote"><strong>Jumlah Produk</strong>
+                <p class="card-text">20 Produk</p></div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
-    </body>
-    </html>
+        </div>
+        </div>
+        </div>
+      </div>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
+  </body>
+  </html>

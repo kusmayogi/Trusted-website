@@ -33,8 +33,8 @@ require "koneksi.php"
                 <div class="col">
                     <tr>
                         <div class="form-group align-text-center mt-4">
-                        <img src="register.jpg" class="img-fluid" large="100">
-                        </div>
+                        <img src="image/gambar 1.png" class="img-fluid" large="100">
+                        </div>  
                     </tr>
                 </div>
                 <div class="col">
