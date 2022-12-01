@@ -29,7 +29,7 @@ require "koneksi.php"
         </div>
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="home_page.html">
+            <li><a href="home.php">
                     <i class="uil uil-estate"></i>
                         <span class="link-name">Home</span>
                     </a></li>
@@ -37,19 +37,19 @@ require "koneksi.php"
                     <i class="uil uil-chart"></i>
                         <span class="link-name">Performa Toko</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="pengiriman.php">
                     <i class="uil uil-message"></i>
                         <span class="link-name">Pengiriman</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="">
                     <i class="uil uil-edit"></i>
                         <span class="link-name">Data Barang</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="laporan.php">
                     <i class="uil uil-file-info-alt"></i>
                         <span class="link-name">Laporan</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="akun.php">
                     <i class="uil uil-user"></i>
                         <span class="link-name">Akun</span>
                     </a></li>

@@ -1,12 +1,17 @@
+<?php
+require "koneksi.php"
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="	css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Trusted: Home</title>
+    <title>pengiriman</title>
   </head>
   <body>
   <nav>
@@ -17,7 +22,7 @@
         </div>
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="">
+                <li><a href="home.php">
                     <i class="uil uil-estate"></i>
                         <span class="link-name">Home</span>
                     </a></li>
@@ -25,7 +30,7 @@
                     <i class="uil uil-chart"></i>
                         <span class="link-name">Performa Toko</span>
                     </a></li>
-                <li><a href="pengiriman.php">
+                <li><a href="">
                     <i class="uil uil-message"></i>
                         <span class="link-name">Pengiriman</span>
                     </a></li>
@@ -44,7 +49,7 @@
             </ul>
         </div>
     </nav>
-    
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
-  </body>
-  </html>
+    sdiuhfiuhoidh
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
+    </body>
+    </html>
