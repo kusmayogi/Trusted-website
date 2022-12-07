@@ -25,7 +25,7 @@ require "koneksi.php"
       <td>Mark</td>
       <td>Otto</td>
       <td></td>
-      <td><button type="button" class="btn btn-danger">Danger</button></td>
+      <td><button type="button" class="btn btn-light">Danger</button></td>
     </tr>
     <tr>
       <td>Mark</td>
