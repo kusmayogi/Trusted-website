@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require "koneksi.php"
 
 ?>
@@ -9,26 +10,20 @@ require "koneksi.php"
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://kit.fontawesome.com/5be573901b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Data Barang</title>
-    <!-- <style type="text/css">
-       a button{
-        background-color: salmon;
-        color: $fff;
-        padding: 10px;
-        font-size: 12px;
-       }
-    </style> -->
+
   </head>
   <body>
     <nav>
-        <div class="logo-name">
+        <!-- <div class="logo-name"> -->
             <div class="logo-image">
                 <img src="image/TRST.png" width="200">
             </div>
-        </div>
+        <!-- </div> -->
         <div class="menu-items">
-            <ul class="nav-links">
+            <ul class="nav-links nav-link collapsed">
             <li><a href="home.php">
                     <i class="uil uil-estate"></i>
                         <span class="link-name">Home</span>
@@ -59,17 +54,24 @@ require "koneksi.php"
     <section class="dashboard">
         <div class="top">
             <i></i>
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Cari disini..">
-            </div>
+            <form action="" method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <input type="text" name="query" class="form-control bg-light border-o" placeholder="Search">
+                    <div class="input-group-append">
+                        <button type="submit" name="cari" class="btn btn-primary">Cari
+                            <!-- <i class="uil-search"></i> -->
+                        </button>
+                    </div>
+                </div>
+            </form>
+
             <div class="notifications">
                 <i class="uil uil-bell"></i>
             </div>
             
             <a href="login.php"><img src="image/lutpi.png" alt=""><span class="link-name">Toko Bang Lutfi</span></a>
         </div>
-        <div class="row">
+  <div class="row">
       <div class="col mb-3">
       <button type="button" class="btn btn-primary">Primary</button>
       </div>
@@ -95,13 +97,20 @@ require "koneksi.php"
         <th scope="col">Harga Jual</th>
         <th scope="col">Stok</th>
         <th scope="col">Deskripsi</th>
-        <th scope="col"></th>
+        <th scope="col">Aksi</th>
       </tr>
     </thead>
     <tbody>
       <?php 
-      $tampil = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang asc");
-      while ($data = mysqli_fetch_array($tampil)):
+     $query = $_POST['query'];
+      if ($query != ''){  
+            $tampil = mysqli_query($koneksi, "SELECT * FROM barang WHERE nama LIKE '%$query%' OR kategori LIKE '%$query%' OR ukuran LIKE '%$query%' ");
+      } else{
+            $tampil = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang asc");
+      }
+
+      if(mysqli_num_rows($tampil)){
+      while ($data = mysqli_fetch_array($tampil)){
       ?>
       <tr>
         <td><img src="image/<?php echo $data['gambar'];?>"width="70px"></td>
@@ -116,11 +125,13 @@ require "koneksi.php"
         <td><?= $data['deskripsi']?></td>
         <!-- <td><button type="submit" class="btn btn-danger mb-3" name="hal">hapus</button></td> -->
         <td>
-           <a href="edit_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bupdate" class="btn btn-warning mb-3">Edit</a> 
-           <a href="hapus_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bhapus"class="btn btn-danger mb-3">Hapus</a> 
+           <a href="edit_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bupdate" class="btn btn-light mb-3"><i class="uil uil-edit-alt"></i></a> 
+           <a href="hapus_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bhapus"class="btn btn-danger mb-3"><i class="uil uil-trash-alt"></i></a> 
         </td>
       </tr>
-      <?php endwhile; ?>
+      <?php }} else{
+          echo'<tr><td colspan="11">Data Yang Dicari Tidak Ada...</td></tr>';
+      }?>
     </tbody>
   </table>
 </div>
