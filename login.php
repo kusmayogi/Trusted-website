@@ -63,20 +63,18 @@ require "koneksi.php"
                     $username = htmlspecialchars($_POST['username']);
                     $password = htmlspecialchars($_POST['password']);
 
-                    $query =  mysqli_query($koneksi, "SELECT * FROM login WHERE ussername='$username' and password='$password'");
-                    $count = mysqli_num_rows($query);
+                    $sql =  mysqli_query($koneksi, "SELECT * FROM register WHERE ussername='$username' and password='$password'");
+                    $cek = mysqli_num_rows($sql);
+                    if($cek > 0) {
+                        $_SESSION['username'] = $_POST['username'];
 
-                    if( $count > 0){
-                        $_SESSION['username'] = $username;
-                        $_SESSION['logged_in'] = true;
-
-                        echo "<script> alert('gagal');
+                        echo "<script> alert('berhasil');
                         document.location='home.php';
                         </script>";
                     }
                     else{
-                        echo "<script> alert('login berhasil');
-                        document.location='home_page.html';
+                        echo "<script> alert('gagal');
+                        document.location='login.php';
                         </script>";
                     }
                         }

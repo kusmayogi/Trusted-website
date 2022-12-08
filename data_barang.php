@@ -80,10 +80,65 @@ require "koneksi.php"
     <div class="mt-2">
       <div class="row-2">
       <div class="col">
-      <button href="test.php" type="button" class="btn btn-light"><i class="uil uil-plus-square"></i></button>
-      <a href="test.php">
-                        <span class="link-name">Upload Barang</span>
-                    </a>
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="uil uil-plus-square"></i>
+  Tambah Produk
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Produk</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="mb-3">
+      <form method="POST" action="action.php" enctype="multipart/form-data">
+      <label for="exampleFormControlInput1" class="form-label">Tambah Gambar</label>
+      <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
+      <section class="upload.php"></section>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_nama" placeholder="masukan nama barang...">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Warna</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_warna" placeholder="masukan warna...">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Ukuran</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_ukuran" placeholder="masukan ukuran...">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Kategori</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_kategori" placeholder="baju, hoodie, sepatu, etc">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Harga Beli</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaBeli" placeholder="masukan harga beli barang">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Harga Jual</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaJual" placeholder="masukan harga jual barang">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Stok</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_stok" placeholder="stok barang anda">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Deskripsi</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="txt_deskripsi" rows="3"></textarea>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-danger mb-3">Kosongkan</button>
+        <button type="submit" class="btn btn-success mb-3" name="bsimpan">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
   <table class="table" action="action.php">
     <thead>
       <tr>
@@ -139,6 +194,6 @@ require "koneksi.php"
 </div>
 </div>
     </section>
-        <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
     </html>
