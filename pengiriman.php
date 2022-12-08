@@ -97,7 +97,7 @@ require ('koneksi.php');
                                 } else{
                                     $tampil = mysqli_query($koneksi, "SELECT * FROM user_detail");
                                 }
-                                $no = BR1;
+                                $no = DEL1;
 
                                 if(mysqli_num_rows($koneksi, $query)){
                                 while ($datatampil = mysqli_fetch_array($tampil)){
@@ -131,3 +131,4 @@ require ('koneksi.php');
     <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
 </body>
 </html>
+
