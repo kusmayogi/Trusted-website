@@ -23,11 +23,11 @@ if (isset($_POST['bupdate'])){
           harga_beli='$hargaBeli_barang', harga_jual='$hargaJual_barang', stok='$stok_barang', 
           deskripsi='$deskripsi_barang' WHERE id_barang ='$id'");
   if($update){
-    echo "<script> alert('berhasil diupdate');
+    echo "<script> alert('Data Berhasil Diupdate!');
     document.location='data_barang.php';
     </script>";
     } else{
-    echo "<script> alert('gagal');
+    echo "<script> alert('Data Gagal Diupdate!');
     document.location='data_barang.php';
     </script>";
     }

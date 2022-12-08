@@ -10,13 +10,20 @@ require "koneksi.php"
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<<<<<<< Updated upstream
     <script src="https://kit.fontawesome.com/5be573901b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Data Barang</title>
 
+=======
+    <link rel="stylesheet" href="home.css">
+    <title>Data Barang</title>
+>>>>>>> Stashed changes
   </head>
   <body>
+    <!-- tampilan navbar -->
     <nav>
+<<<<<<< Updated upstream
         <!-- Logo Navbar-->
         <div class="logo-image">
             <img src="image/gbr_logo.png" width="200">
@@ -49,6 +56,44 @@ require "koneksi.php"
                     <i class="uil uil-user"></i>
                         <span class="link-name">Akun</span>
                     </a></li>
+=======
+        <!-- menampilkan logo -->
+        <div  class="logo-name">
+            <img src="image/gbr_logo1.png" width="200">
+        </div>
+
+        <!-- menampilkan navbar -->
+        <div class="menu-items">
+            <ul class="nav-links nav-link collapsed">
+              <li><a href="home_page.html">
+                  <i class="uil uil-estate link"></i>
+                      <span class="link-name">Home</span>
+                  </a></li>
+              <li><a href="product.html">
+                  <i class="uil uil-chart"></i>
+                      <span class="link-name">Performa Toko</span>
+                  </a></li>
+              <li><a href="#">
+                  <i class="uil uil-message"></i>
+                      <span class="link-name">Pengiriman</span>
+                  </a></li>
+              <li><a href="data_barang.php" class="rounded-pill" style="background-color: #FF69B4;">
+                  <i class="uil uil-edit"></i>
+                      <span class="link-name">Data Barang</span>
+                  </a></li>
+              <li><a href="#">
+                  <i class="uil uil-file-info-alt"></i>
+                      <span class="link-name">Laporan</span>
+                  </a></li>
+              <li><a href="akun.php">
+                  <i class="uil uil-user"></i>
+                      <span class="link-name">Akun</span>
+                  </a></li>
+              <li><a href="login.php">
+                  <i class="uil uil-sign-out-alt"></i>
+                      <span class="link-name">Logout</span>
+                  </a></li>
+>>>>>>> Stashed changes
             </ul>
         </div>
     </nav>
@@ -56,11 +101,20 @@ require "koneksi.php"
     <section class="dashboard">
         <div class="top">
             <i></i>
+<<<<<<< Updated upstream
             <form action="" method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
                     <input type="text" name="query" class="form-control rounded-pill" placeholder="Search">
                     <div class="input-group-append">
                         <button type="submit" name="cari" class="btn btn-light">
+=======
+            
+            <form action="" method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <input type="text" name="query" class="form-control bg-light border-o" placeholder="Search">
+                    <div class="input-group-append">
+                        <button type="submit" name="cari" class="btn btn-primary">
+>>>>>>> Stashed changes
                             <i class="uil-search"></i>
                         </button>
                     </div>
@@ -68,10 +122,40 @@ require "koneksi.php"
             </form>
 
             <div class="notifications">
-                <i class="uil uil-bell"></i>
+                <i class="uil uil-bell" width="100"></i>
             </div>
+
+            <!-- <div class="topbar-divider d-none d-sm-block"></div>
             
-            <a href="login.php"><img src="image/lutpi.png" alt=""><span class="link-name">Toko Bang Lutfi</span></a>
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['nama_penjual'];?></span>
+                    <img class="img-profile rounded-circle" src="image/lutpi.png">
+                </a>
+               
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Profile
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Settings
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Activity Log
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Logout
+                    </a>
+                </div>
+            </li> -->
+
+            <a href="#"><img src="image/lutpi.png" alt=""><span class="link-name">Toko Bang Lutfi</span></a>
         </div>
   <div class="row">
       <div class="col mb-3">
@@ -82,6 +166,7 @@ require "koneksi.php"
     <div class="mt-2">
       <div class="row-2">
       <div class="col">
+<<<<<<< Updated upstream
       <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="uil uil-plus-square"></i>
       Tambah Produk</button>
 <!-- Modal -->
@@ -146,6 +231,12 @@ require "koneksi.php"
     </div>
   </div>
 </div>
+=======
+      <button href="test.php" type="button" class="btn btn-light"><i class="uil uil-plus-square"></i></button>
+      <a href="test.php">
+        <span class="link-name">Upload Barang</span>
+      </a>
+>>>>>>> Stashed changes
   <table class="table" action="action.php">
     <thead>
       <tr>
@@ -163,6 +254,7 @@ require "koneksi.php"
       </tr>
     </thead>
     <tbody>
+<<<<<<< Updated upstream
       <?php 
      $query = $_POST['query'];
       if ($query != ''){  
@@ -171,11 +263,20 @@ require "koneksi.php"
             $tampil = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang asc");
       }
 
+=======
+      <?php
+      $query = $_POST['query'];
+      if($query != ''){
+        $tampil = mysqli_query($koneksi, "SELECT * FROM barang WHERE nama LIKE '%$query%' OR kategori LIKE '%$query%' OR ukuran LIKE '%$query%' ");
+      } else{
+        $tampil = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang asc");
+      }
+>>>>>>> Stashed changes
       if(mysqli_num_rows($tampil)){
       while ($data = mysqli_fetch_array($tampil)){
       ?>
       <tr>
-        <td><img src="image/<?php echo $data['gambar'];?>"width="70px"></td>
+        <td><img src="image/<?php echo $data['gambar'];?>"width="100px"></td>
         <td><?= $data['id_barang']?></td>
         <td><?= $data['nama']?></td>
         <td><?= $data['warna']?></td>
@@ -185,6 +286,7 @@ require "koneksi.php"
         <td><?= $data['harga_jual']?></td>
         <td><?= $data['stok']?></td>
         <td><?= $data['deskripsi']?></td>
+<<<<<<< Updated upstream
         <!-- <td><button type="submit" class="btn btn-danger mb-3" name="hal">hapus</button></td> -->
         <td><button type="button" class="btn btn-light?id_barang=<?php echo $data['id_barang']; ?>" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="uil uil-plus-square"></i>
       Tambah Produk</button>
@@ -278,6 +380,17 @@ require "koneksi.php"
       <?php }} else{
           echo'<tr><td colspan="11">Data Yang Dicari Tidak Ada...</td></tr>';
       }?>
+=======
+
+        <td>
+           <a href="edit_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bupdate" class="btn btn-light mb-3"><i class="uil uil-edit-alt"></i></a> 
+           <a href="hapus_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bhapus"class="btn btn-danger mb-3"><i class="uil uil-trash-alt"></i></a> 
+        </td>
+      </tr>
+      <?php }} else{
+        echo '<tr><td colspan="10">Data Yang Dicari Tidak Ada...</td></tr>';
+      } ?>
+>>>>>>> Stashed changes
     </tbody>
   </table>
 </div>

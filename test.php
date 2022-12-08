@@ -14,12 +14,12 @@ require "koneksi.php"
   </head>
   <body>
     <div class="container-fluid mt-4">
-  <div class="card" style="width: 50rem;">
+  <div class="card" style="width: 103rem;">
   <div class="card-body">
     <h5 class="card-title"><a href="data_barang.php">
   <i class="uil uil-step-backward-circle"></i>
                     </a>Upload Barang</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Masukan data barang kamu pada kolom kolom dibawah ini</h6>
+    <h6 class="card-subtitle mb-2 text-muted text-center">Masukan data barang kamu sesuai dengan kolom dibawah ini</h6>
 <form method="POST" action="action.php" enctype="multipart/form-data">
     <div class="container-fluid">
     <div class="mb-3">

@@ -16,7 +16,7 @@ if (isset($_POST['bsimpan'])){
     VALUES ('$gbr_produk', '$txt_id', '$txt_nama', '$txt_warna', '$txt_ukuran', '$txt_kategori', '$txt_hargaBeli', '$txt_hargaJual', '$txt_stok', '$txt_deskripsi');");
     move_uploaded_file($ganti,'A1_Project/',$gbr_produk);
     if ($simpan){
-        echo "<script> alert('berhasil');
+        echo "<script> alert('Data Berhasil Ditambahkan!');
         document.location='data_barang.php';
         </script>";
     } else if ($_GET['hal'] == "hapus"){

@@ -15,14 +15,14 @@ require "koneksi.php"
 <div class="container text-center">
     <div class="mt-4">
         <div class="col">
-            <img src="TRST.png" class="img-fluid" alt="50" width="170">
+            <img src="image/TRST.png" class="img-fluid" alt="50" width="170">
         </div>
     </div>
 </div>
     <div class="container text-center">   
         <div class="row">
           <div class="col">
-          <img src="image/login.jpg" class="img-fluid" large="100">
+          <img src="image/gbr_login1.png" class="img-fluid" large="100">
             <div class="container text-center">
                 <!-- <div class="col"> -->
                 <div class="row"> 

@@ -1,3 +1,4 @@
+@charset "utf-8";
 * {
   margin: 0;
   padding: 0;
@@ -286,13 +287,13 @@ nav .menu-items {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #707070;
+  color: #1F3846;
 }
 
 .menu-items li a .link-name {
   font-size: 18px;
   font-weight: 400;
-  color: #707070;
+  color: #1F3846;
   transition: var(--tran-05);
 }
 
@@ -570,6 +571,7 @@ nav.close ~ .dashboard .top {
   padding-right: 24px;
   overflow: hidden;
 }
+
 
 /* .activity .activity-data .data-gambar img {
   width: 40px;

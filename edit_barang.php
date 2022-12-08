@@ -28,13 +28,18 @@ require ('koneksi.php');
     <title>Edit Data Barang</title>
   </head>
 <body>
-    <div class="container-fluid mt-4">
-  <div class="card" style="width: 50rem;">
-  <div class="card-body">
+<div class="container">
+
+<div class="card o-hidden border-0 my-0">
+  <div class="card" style="width: 40rem;">
+    <div class="card-body p-3">
+    <!-- <div class="container-fluid mt-4">
+  <div class="card" style="width: 103rem;">
+  <div class="card-body"> -->
     <h5 class="card-title"><a href="data_barang.php">
   <i class="uil uil-step-backward-circle"></i>
                     </a>Edit Data Barang</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Ubahlah data barang kamu pada kolom-kolom dibawah ini</h6>
+    <h6 class="card-subtitle mt-3 mb-3 text-muted">Anda dapat mengubah data barang anda melalui kolom kolom di bawah ini</h6>
 <form method="POST" action="update_barang.php" enctype="multipart/form-data">
     <div class="container-fluid">
     <div class="mb-3">
@@ -75,11 +80,11 @@ require ('koneksi.php');
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Stok</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_stok" value="<?php echo $data['stok']; ?>" placeholder="Masukkan stok barang anda">
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_stok" value="<?php echo $data['stok']; ?>" placeholder="Masukkan stok barang">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Deskripsi</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" name="txt_deskripsi" rows="3" value="<?php echo $data['deskripsi']; ?>"></textarea>
+      <input class="form-control" id="exampleFormControlTextarea1" name="txt_deskripsi" rows="3" value="<?php echo $data['deskripsi']; ?>" placeholder="Masukkan deskripsi barang">
     </div>
     <div class="col-4">
     <a href="data_barang.php" class="btn btn-danger mb-3">Batal</a>

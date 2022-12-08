@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://kit.fontawesome.com/5be573901b.js" crossorigin="anonymous"></script>
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="style.css">
     <title>Akun</title>
 </head>
@@ -59,6 +60,63 @@ session_start();
                             <i class="fas fa-solid fa-bars" style="font-size:20px;"></i>
                             <span class="link-name">Tentang Kami</span>
                         </a>
+=======
+    <link rel="stylesheet" href="home.css">
+    <title>Akun</title>
+</head>
+<body>
+    <!-- tampilan navbar -->
+    <nav>
+        <!-- menampilkan logo -->
+        <div  class="logo-name">
+            <img src="image/gbr_logo1.png" width="200">
+        </div>
+
+        <!-- menampilkan navbar -->
+        <div class="menu-items">
+            <ul class="nav-links nav-link collapsed nav nav-pills">
+              <li><a href="home_page.html">
+                  <i class="fa fa-solid fa-house" style="font-size:20px;"></i>
+                      <span class="link-name">Home</span>
+                  </a></li>
+              <li><a href="product.html">
+                  <i class="fas fa-solid fa-chart-simple" style="font-size:20px;"></i>
+                      <span class="link-name">Performa Toko</span>
+                  </a></li>
+              <li><a href="#">
+                  <i class="fas fa-truck" style="font-size:20px;"></i>
+                      <span class="link-name">Pengiriman</span>
+                  </a></li>
+              <li><a href="data_barang.php">
+                  <i class="fas fa-solid fa-pen-to-square" style="font-size:20px;"></i>
+                      <span class="link-name">Data Barang</span>
+                  </a></li>
+              <li><a href="#">
+                  <i class="fas fa-solid fa-file-lines" style="font-size:20px;"></i>
+                      <span class="link-name">Laporan</span>
+                  </a></li>
+                <li><a href="akun.php" class="rounded-pill" style="background-color: #C52A81;">
+                  <i class="fas fa-user" style="color: white; font-size:20px;"></i>
+                      <span class="link-name text-white">Akun</span>
+                  </a></li>
+              <!-- Nav Item - Akun Collapse Menu -->
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="akun_saya.php" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-user-gear" style="font-size:20px;"></i>
+                    <span class="link-name">Akun Saya</span>
+                </a>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="tentang_kami.php" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-solid fa-bars" style="font-size:20px;"></i>
+                    <span class="link-name">Tentang Kami</span>
+                </a>
+              <li><a href="login.php">
+                  <i class="fa-solid fa-right-from-bracket" style="font-size:20px;"></i>
+                      <span class="link-name">Logout</span>
+                  </a></li>
+>>>>>>> Stashed changes
             </ul>
         </div>
     </nav>
