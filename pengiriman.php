@@ -71,63 +71,14 @@ require ('koneksi.php');
                                     <i class="uil-search"></i></button>
                                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="uil uil-plus"></i>
                                     Tambah
-                                    </button>
-                                <!-- <button type="button" class="btn btn-success">
-                                    <i class="uil uil-plus"></i>&nbsp;Tambah&nbsp;</button> -->
+                                </button>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <!-- Modal -->
-                <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Data Pengiriman</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="mb-3">
-                    <form method="POST" action="action.php" enctype="multipart/form-data">
-                    <label for="exampleFormControlInput1" class="form-label">Tambah Gambar</label>
-                    <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
-                    <section class="upload.php"></section>
-                    </div>
-                    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Id Pengiriman</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_idPengiriman" placeholder="masukan nama barang...">
-                    </div>
-                    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Tanggal</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_tanggal" placeholder="masukan warna...">
-                    </div>
-                    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Pelanggan</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_pelanggan" placeholder="masukan ukuran...">
-                    </div>
-                    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">No Resi</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_noResi" placeholder="baju, hoodie, sepatu, etc">
-                    </div>
-                    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Keterangan</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_keterangan" placeholder="masukan harga beli barang">
-                    </div>
-                    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Status</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_status" placeholder="masukan harga jual barang">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="reset" class="btn btn-danger mb-3">Kosongkan</button>
-                        <button type="submit" class="btn btn-success mb-3" name="bsimpan">Simpan</button>
-                    </div>
-                    </div>
-                </div>
-                </div> -->
 
-		        <table class="table" action="">
-                        <!-- <table border="DEL1" class="table table-striped" action=""> -->
+		            <table class="table" action="">
 						<thead>
 						  <tr>
 							<th scope="col">Id Pengiriman</th>
@@ -147,7 +98,7 @@ require ('koneksi.php');
                                 } else{
                                     $tampil = mysqli_query($koneksi, "SELECT * FROM pengiriman");
                                 }
-                                $no = DEL1;
+                                // $no = DEL1;
 
                                 if(mysqli_num_rows($tampil)){
                                 while ($data = mysqli_fetch_array($tampil)){
@@ -170,10 +121,7 @@ require ('koneksi.php');
                                 }?>
 						</tbody>
 					</table>
-					<?php echo $this->pagination->create_links();?>
-					</div>
-				
-				</div>
+
 			</div>
 		</div>
 	</section>
