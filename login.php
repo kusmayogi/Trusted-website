@@ -43,10 +43,10 @@ require "koneksi.php"
             <div class="container-fluid">
                 <div class="row mt-4">
                 <div class="col">
-                <td><input type="text" placeholder="Username" class="form-control rounded-pill" name="username"></td>
+                <td><input type="text" placeholder="Username" class="form-control rounded-pill" name="username"required></td>
                 </div> 
                 <div class="row mt-2">
-                <td><input type="password" placeholder="password" class="form-control rounded-pill" name="password"></td>
+                <td><input type="password" placeholder="password" class="form-control rounded-pill" name="password"required></td>
                 </div>
                 <div class="row mt-4">
                     <button class="btn btn-danger" name="login"> Login </button>
