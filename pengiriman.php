@@ -110,8 +110,9 @@ require ('koneksi.php');
                                 <td><?php $data[''] ?></td>
                                 <td><?php $data[''] ?></td>
                                 <td><?php $data[''] ?></td>
-                                <td><a href="edit.php?id_barang=<?php echo $data['id_barang']; ?>" name="bupdate"class="btn btn-light mb-3"><i class="uil uil-edit-alt"></i></a>
-                                    
+                                <td>
+                                    <a href="edit.php?id_barang=<?php echo $data['id_pengiriman']; ?>" name="bupdate" class="btn btn-light mb-3"><i class="uil uil-edit-alt"></i></a>
+                                    <a href="hapus.php?id_barang=<?php echo $data['id_pengiriman']; ?>" name="bhapus"class="btn btn-danger mb-3"><i class="uil uil-trash-alt"></i></a>
                                 </td>
                             </tr>
                             <?php

@@ -17,13 +17,14 @@ require "koneksi.php"
   </head>
   <body>
     <nav>
-        <!-- <div class="logo-name"> -->
-            <div class="logo-image">
-                <img src="image/TRST.png" width="200">
-            </div>
-        <!-- </div> -->
+        <!-- Logo Navbar-->
+        <div class="logo-image">
+            <img src="image/gbr_logo.png" width="200">
+        </div>
+
+        <!-- navbar -->
         <div class="menu-items">
-            <ul class="nav-links nav-link collapsed">
+            <ul class="nav-links nav-link collapsed nav-pills">
             <li><a href="home.php">
                     <i class="uil uil-estate"></i>
                         <span class="link-name">Home</span>
@@ -36,9 +37,9 @@ require "koneksi.php"
                     <i class="uil uil-message"></i>
                         <span class="link-name">Pengiriman</span>
                     </a></li>
-                <li><a href="">
-                    <i class="uil uil-edit"></i>
-                        <span class="link-name">Data Barang</span>
+                <li><a href="data_barang.php" class="rounded-pill" style="background-color: #C52A81;">
+                    <i class="uil uil-edit" style="color: black ;"></i>
+                        <span class="link-name" style="color: black;">Data Barang</span>
                     </a></li>
                 <li><a href="laporan.php">
                     <i class="uil uil-file-info-alt"></i>
@@ -51,6 +52,7 @@ require "koneksi.php"
             </ul>
         </div>
     </nav>
+
     <section class="dashboard">
         <div class="top">
             <i></i>
@@ -58,8 +60,8 @@ require "koneksi.php"
                 <div class="input-group">
                     <input type="text" name="query" class="form-control bg-light border-o" placeholder="Search">
                     <div class="input-group-append">
-                        <button type="submit" name="cari" class="btn btn-primary">Cari
-                            <!-- <i class="uil-search"></i> -->
+                        <button type="submit" name="cari" class="btn btn-primary">
+                            <i class="uil-search"></i>
                         </button>
                     </div>
                 </div>

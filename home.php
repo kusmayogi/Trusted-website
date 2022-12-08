@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Trusted: Login</title>
+  </body>
     <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="TRST.png" width="200">
-            </div>
+        <!-- Logo Navbar-->
+        <div class="logo-image">
+            <img src="image/gbr_logo.png" width="200">
         </div>
+
+        <!-- navbar -->
         <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="index.html">
-                    <i class="uil uil-estate"></i>
-                        <span class="link-name">Home</span>
-                    </a></li>
+            <ul class="nav-links nav-link collapsed nav-pills">
+              <li><a href="home.php" class="rounded-pill" style="background-color: #C52A81;">
+                      <i class="uil uil-estate" style="color: black ;"></i>
+                          <span class="link-name" style="color: black;">Home</span>
+                      </a></li>
                 <li><a href="product.html">
                     <i class="uil uil-chart"></i>
                         <span class="link-name">Performa Toko</span>
@@ -31,11 +33,11 @@
                     <i class="uil uil-edit"></i>
                         <span class="link-name">Data Barang</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="laporan.php">
                     <i class="uil uil-file-info-alt"></i>
                         <span class="link-name">Laporan</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="akun.php">
                     <i class="uil uil-user"></i>
                         <span class="link-name">Akun</span>
                     </a></li>
