@@ -1,28 +1,29 @@
 <?php
-require "koneksi.php"
-
+require ('koneksi.php');
 ?>
 
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>pengiriman</title>
-  </head>
-  <body>
-  <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="TRST.png" width="200">
-            </div>
+    <script src="https://kit.fontawesome.com/5be573901b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Pengiriman Barang</title>
+</head>
+<body>
+    <nav>
+        <!-- Logo Navbar-->
+        <div class="logo-image">
+            <img src="image/gbr_logo.png" width="200">
         </div>
+
+        <!-- navbar -->
         <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="home.php">
+            <ul class="nav-links nav-link collapsed nav-pills">
+            <li><a href="home.php">
                     <i class="uil uil-estate"></i>
                         <span class="link-name">Home</span>
                     </a></li>
@@ -30,9 +31,9 @@ require "koneksi.php"
                     <i class="uil uil-chart"></i>
                         <span class="link-name">Performa Toko</span>
                     </a></li>
-                <li><a href="">
-                    <i class="uil uil-message"></i>
-                        <span class="link-name">Pengiriman</span>
+                <li><a href="pengiriman.php" class="rounded-pill" style="background-color: #C52A81;">
+                    <i class="uil uil-message" style="color: black ;"></i>
+                        <span class="link-name" style="color: black;">Pengiriman</span>
                     </a></li>
                 <li><a href="data_barang.php">
                     <i class="uil uil-edit"></i>
@@ -49,7 +50,6 @@ require "koneksi.php"
             </ul>
         </div>
     </nav>
-    sdiuhfiuhoidh
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
     </body>
     </html>
