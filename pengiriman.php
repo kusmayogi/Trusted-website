@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require ('koneksi.php');
 ?>
 
@@ -68,56 +69,105 @@ require ('koneksi.php');
                             <div class="input-group-append">
                                 <button type="submit" name="cari" class="btn btn-primary">
                                     <i class="uil-search"></i></button>
-                                <a href="#" type="button" class="btn btn-success">
-                                    <i class="uil uil-plus"></i>&nbsp;Tambah&nbsp;</a>
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="uil uil-plus"></i>
+                                    Tambah
+                                    </button>
+                                <!-- <button type="button" class="btn btn-success">
+                                    <i class="uil uil-plus"></i>&nbsp;Tambah&nbsp;</button> -->
                             </div>
                         </div>
                     </form>
                 </div>
 
-		        <div class="tabel">
-				    <div class="mt-2 row-2 col">
-                        <table border="DEL1" class="table table-striped" action="">
+                <!-- Modal -->
+                <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Data Pengiriman</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="mb-3">
+                    <form method="POST" action="action.php" enctype="multipart/form-data">
+                    <label for="exampleFormControlInput1" class="form-label">Tambah Gambar</label>
+                    <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
+                    <section class="upload.php"></section>
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Id Pengiriman</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_idPengiriman" placeholder="masukan nama barang...">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Tanggal</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_tanggal" placeholder="masukan warna...">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Pelanggan</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_pelanggan" placeholder="masukan ukuran...">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">No Resi</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_noResi" placeholder="baju, hoodie, sepatu, etc">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Keterangan</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_keterangan" placeholder="masukan harga beli barang">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Status</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_status" placeholder="masukan harga jual barang">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-danger mb-3">Kosongkan</button>
+                        <button type="submit" class="btn btn-success mb-3" name="bsimpan">Simpan</button>
+                    </div>
+                    </div>
+                </div>
+                </div> -->
+
+		        <table class="table" action="">
+                        <!-- <table border="DEL1" class="table table-striped" action=""> -->
 						<thead>
 						  <tr>
-							<th>Id Pengiriman</th>
-							<th>Tanggal</th>
-							<th>Pelanggan</th>
-                            <th>No Resi</th>
-							<th>Keterangan</th>
-							<th>Status</th>
-							<th>Aksi</th>
+							<th scope="col">Id Pengiriman</th>
+							<th scope="col">Tanggal</th>
+							<th scope="col">Pelanggan</th>
+                            <th scope="col">No Resi</th>
+							<th scope="col">Keterangan</th>
+							<th scope="col">Status</th>
+							<th scope="col">Aksi</th>
 						  </tr>
 						</thead>
 						<tbody>
                             <?php
                                 $query = $_POST['query'];
                                 if ($query != ''){
-                                    $tampil = mysqli_query($koneksi, "SELECT * FROM user_detail");
+                                    $tampil = mysqli_query($koneksi, "SELECT * FROM pengiriman WHERE pelanggan LIKE '%$query%'");
                                 } else{
-                                    $tampil = mysqli_query($koneksi, "SELECT * FROM user_detail");
+                                    $tampil = mysqli_query($koneksi, "SELECT * FROM pengiriman");
                                 }
                                 $no = DEL1;
 
-                                if(mysqli_num_rows($koneksi, $query)){
-                                while ($datatampil = mysqli_fetch_array($tampil)){
+                                if(mysqli_num_rows($tampil)){
+                                while ($data = mysqli_fetch_array($tampil)){
                                 ?>
                             <tr>
-                                <td><?php $data[''] ?></td>
-                                <td><?php $data[''] ?></td>
-                                <td><?php $data[''] ?></td>
-                                <td><?php $data[''] ?></td>
-                                <td><?php $data[''] ?></td>
-                                <td><?php $data[''] ?></td>
-                                <td><?php $data[''] ?></td>
+                                <td><?= $data['id_Pengiriman'] ?></td>
+                                <td><?= $data['tanggal'] ?></td>
+                                <td><?= $data['pelanggan'] ?></td>
+                                <td><?= $data['no_resi'] ?></td>
+                                <td><?= $data['keterangan'] ?></td>
+                                <td><?= $data['status'] ?></td>
                                 <td>
                                     <a href="edit.php?id_barang=<?php echo $data['id_pengiriman']; ?>" name="bupdate" class="btn btn-light mb-3"><i class="uil uil-edit-alt"></i></a>
                                     <a href="hapus.php?id_barang=<?php echo $data['id_pengiriman']; ?>" name="bhapus"class="btn btn-danger mb-3"><i class="uil uil-trash-alt"></i></a>
                                 </td>
                             </tr>
                             <?php
-                                $no++;
-                                }} ?>
+                                }} else{
+                                    echo'<tr><td colspan="7">Data yang Dicari Tidak Ada...</td></tr>';
+                                }?>
 						</tbody>
 					</table>
 					<?php echo $this->pagination->create_links();?>

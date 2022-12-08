@@ -58,9 +58,9 @@ require "koneksi.php"
             <i></i>
             <form action="" method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
-                    <input type="text" name="query" class="form-control bg-light border-o" placeholder="Search">
+                    <input type="text" name="query" class="form-control rounded-pill" placeholder="Search">
                     <div class="input-group-append">
-                        <button type="submit" name="cari" class="btn btn-primary">
+                        <button type="submit" name="cari" class="btn btn-light">
                             <i class="uil-search"></i>
                         </button>
                     </div>
@@ -83,9 +83,7 @@ require "koneksi.php"
       <div class="row-2">
       <div class="col">
       <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="uil uil-plus-square"></i>
-  Tambah Produk
-</button>
-
+      Tambah Produk</button>
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -111,7 +109,14 @@ require "koneksi.php"
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Ukuran</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_ukuran" placeholder="masukan ukuran...">
+      <select class="form-select" name="txt_ukuran" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+  <option value="XXL">XXL</option>
+</select>
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Kategori</label>
@@ -181,9 +186,93 @@ require "koneksi.php"
         <td><?= $data['stok']?></td>
         <td><?= $data['deskripsi']?></td>
         <!-- <td><button type="submit" class="btn btn-danger mb-3" name="hal">hapus</button></td> -->
-        <td>
+        <td><button type="button" class="btn btn-light?id_barang=<?php echo $data['id_barang']; ?>" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="uil uil-plus-square"></i>
+      Tambah Produk</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Produk</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="mb-3">
+      <form method="POST" action="action.php" enctype="multipart/form-data">
+      <label for="exampleFormControlInput1" class="form-label">Tambah Gambar</label>
+      <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
+      <section class="upload.php"></section>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_nama" placeholder="masukan nama barang...">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Warna</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_warna" placeholder="masukan warna...">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Ukuran</label>
+      <select class="form-select" name="txt_ukuran" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+  <option value="XXL">XXL</option>
+</select>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Kategori</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_kategori" placeholder="baju, hoodie, sepatu, etc">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Harga Beli</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaBeli" placeholder="masukan harga beli barang">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Harga Jual</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaJual" placeholder="masukan harga jual barang">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Stok</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_stok" placeholder="stok barang anda">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Deskripsi</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_deskripsi" placeholder="deskripsi barang anda">
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-danger mb-3">Kosongkan</button>
+        <<button type="submit" class="btn btn-success mb-3" name="bupdate">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
            <a href="edit_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bupdate" class="btn btn-light mb-3"><i class="uil uil-edit-alt"></i></a> 
-           <a href="hapus_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bhapus"class="btn btn-danger mb-3"><i class="uil uil-trash-alt"></i></a> 
+           <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<i class="uil uil-trash-alt"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Produk</h1>
+      </div>
+      <div class="modal-body">
+        Apakah anda yain akan menghapus produk ini?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="hapus_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bhapus"class="btn btn-danger mb-3">Hapus</a>
+      </div>
+    </div>
+  </div>
+</div> 
         </td>
       </tr>
       <?php }} else{
