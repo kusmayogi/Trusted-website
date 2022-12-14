@@ -146,6 +146,7 @@ require "koneksi.php"
                                 </div>
                             </div>
                         </div>
+                    </div>
                         <table class="table" action="action.php">
                             <thead>
                                 <tr>
