@@ -10,15 +10,12 @@ require "koneksi.php"
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-<<<<<<< Updated upstream
+
     <script src="https://kit.fontawesome.com/5be573901b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Data Barang</title>
-
-=======
     <link rel="stylesheet" href="home.css">
     <title>Data Barang</title>
->>>>>>> Stashed changes
   </head>
   <body>
     <!-- tampilan navbar -->
