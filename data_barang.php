@@ -16,6 +16,7 @@ require "koneksi.php"
     <title>Data Barang</title>
     <link rel="stylesheet" href="home.css">
     <title>Data Barang</title>
+  
   </head>
   <body>
     <!-- tampilan navbar -->
@@ -28,7 +29,7 @@ require "koneksi.php"
         <!-- menampilkan navbar -->
         <div class="menu-items">
             <ul class="nav-links nav-link collapsed">
-              <li><a href="home_page.html">
+              <li><a href="home.php">
                   <i class="uil uil-estate link"></i>
                       <span class="link-name">Home</span>
                   </a></li>
@@ -65,13 +66,11 @@ require "koneksi.php"
             <i></i>
             
             <form action="" method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                <div class="input-group">
-                    <input type="text" name="query" class="form-control bg-light border-o" placeholder="Search">
-                    <div class="input-group-append">
-                        <button type="submit" name="cari" class="btn btn-primary">
+                <div class="search_div">
+                    <input type="text" name="query" class="search_input" placeholder="Search"><button type="submit" name="cari" class="search_button">
                             <i class="uil-search"></i>
                         </button>
-                    </div>
+                        
                 </div>
             </form>
 
@@ -103,10 +102,38 @@ require "koneksi.php"
       </div>
       <div class="modal-body">
       <div class="mb-3">
-      <form method="POST" action="action.php" enctype="multipart/form-data">
-      <label for="exampleFormControlInput1" class="form-label">Tambah Gambar</label>
+      <form method="POST" class="form-input" action="action.php" enctype="multipart/form-data">
       <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
       <section class="upload.php"></section>
+      <div class="image-preview" id="imagePreview">
+          <img src="" alt="Image Preview" class="image-preview__image">
+          <span class="image-preview__default-text">Image Preview</span>
+        </div>
+
+        <script>
+          const inpFile = document.getElementById("exampleFormControlInput1");
+          const previewContainer = document.getElementById("imagePreview");
+          const previewImage = previewContainer.querySelector(".image-preview__image");
+          const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+
+          inpFile.addEventListener("change", function() {
+            const file = this.files[0];
+
+            if (file) {
+              const reader = new FileReader();
+
+              previewDefaultText.style.display = "none";
+              previewImage.style.display = "block";
+
+              reader.addEventListener("load", function() {
+                console.log(this);
+                previewImage.setAttribute("src", this.result);
+              });
+
+              reader.readAsDataURL(file);
+            }
+          });
+        </script>
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
@@ -119,7 +146,7 @@ require "koneksi.php"
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Ukuran</label>
       <select class="form-select" name="txt_ukuran" aria-label="Default select example">
-  <option selected>Open this select menu</option>
+  <option selected>Pilih Ukuran...</option>
   <option value="S">S</option>
   <option value="M">M</option>
   <option value="L">L</option>
@@ -224,10 +251,7 @@ require "koneksi.php"
           echo'<tr><td colspan="11">Data Yang Dicari Tidak Ada...</td></tr>';
       }?>
 
-        <td>
-           <a href="edit_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bupdate" class="btn btn-light mb-3"><i class="uil uil-edit-alt"></i></a> 
-           <a href="hapus_barang.php?id_barang=<?php echo $data['id_barang']; ?>" name="bhapus"class="btn btn-danger mb-3"><i class="uil uil-trash-alt"></i></a> 
-        </td>
+       
       </tr>
     </tbody>
   </table>
@@ -236,6 +260,7 @@ require "koneksi.php"
 </div>
 </div>
     </section>
+    <script></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
     </html>

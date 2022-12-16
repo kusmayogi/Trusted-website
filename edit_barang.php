@@ -33,9 +33,6 @@ require ('koneksi.php');
 <div class="card o-hidden border-0 my-0">
   <div class="card" style="width: 40rem;">
     <div class="card-body p-3">
-    <!-- <div class="container-fluid mt-4">
-  <div class="card" style="width: 103rem;">
-  <div class="card-body"> -->
     <h5 class="card-title"><a href="data_barang.php">
   <i class="uil uil-step-backward-circle"></i>
                     </a>Edit Data Barang</h5>
@@ -44,8 +41,37 @@ require ('koneksi.php');
     <div class="container-fluid">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Ubah Gambar</label>
-      <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="" value="<?php echo $data['gambar']; ?>">
+      <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
       <section class="upload.php"></section>
+      <div class="image-preview" id="imagePreview">
+          <img src="" alt="Image Preview" class="image-preview__image">
+          <span class="image-preview__default-text">Image Preview</span>
+        </div>
+
+        <script>
+          const inpFile = document.getElementById("exampleFormControlInput1");
+          const previewContainer = document.getElementById("imagePreview");
+          const previewImage = previewContainer.querySelector(".image-preview__image");
+          const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+
+          inpFile.addEventListener("change", function() {
+            const file = this.files[0];
+
+            if (file) {
+              const reader = new FileReader();
+
+              previewDefaultText.style.display = "none";
+              previewImage.style.display = "block";
+
+              reader.addEventListener("load", function() {
+                console.log(this);
+                previewImage.setAttribute("src", this.result);
+              });
+
+              reader.readAsDataURL(file);
+            }
+          });
+        </script>
     </div>
     <!-- <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Id Barang</label>

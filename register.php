@@ -24,7 +24,7 @@ require "koneksi.php"
 <div class="container text-center">
     <div class="mt-2">
         <div class="col">
-            <img src="TRST.png" class="img-fluid" alt="50" width="170">
+            <img src="image/TRST.png" class="img-fluid" alt="50" width="170">
     
             </div>
     </div>
@@ -45,32 +45,32 @@ require "koneksi.php"
                                 <p class="mb-4 text-muted">Yuk! isi data dibawah ini</p>
                             </div>
                             <div class="mt-4">
-                            <form class="user" action="register.php" method="POST">
+                            <form action="register.php" method="POST">
                                 <div class="form-group row mb-3">
                                     <div class="col mb-3">
                                         <input type="text" class="form-control rounded-pill" id="FirstName"
-                                            placeholder="Nama" name="txt_nama">
+                                            placeholder="Nama" name="txt_nama"required>
                                     </div>
                                 </div>
                                 <div class="form-group mt-3">
                                     <input type="email" class="form-control form-control-user rounded-pill" id="InputUssername"
-                                        placeholder="Ussername" name="txt_username">
+                                        placeholder="Ussername" name="txt_username"required>
                                 </div>
                                 <div class="form-group row mt-3">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user rounded-pill"
-                                            id="InputPassword" placeholder="Password" name="txt_password">
+                                            id="InputPassword" placeholder="Password" name="txt_password" required>
                                 </div>
                                 </div>
+                                
                     <div class="form-group mt-3">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                    <td><input type="password" placeholder="Repeat password" class="form-control rounded-pill" name="txt_repeatpassword"></td>
+                    <td><button class="btn btn-danger" name="submit"> Daftar </button></td>
                     </div>
                     </div>
+
                             </form> 
-                                <div class="mt-3 align text-center">
-                                    <button type="submit" class ="btn btn-danger btn-user btn-block rounded-pill" name="submit">Daftar</button>
-                                </div>
+                               
                                 <div class="text-center">
                                 <p class="small text-muted fz-13">Sudah mempunyai akun? <a href="login.php"> Login Sekarang!</a></p>
                             </div>
@@ -78,23 +78,6 @@ require "koneksi.php"
                     </tr>
                 </div>
             </div>
-
-    
-
-    <!-- <div class="container"> -->
-
-        <!-- <div class="card o-hidden border-0 shadow-lg my-5"> -->
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="C:/xampp/htdocs/register/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
 
     <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
   </body>
@@ -104,17 +87,16 @@ if(isset($_POST['submit'])){
     $txt_nama = htmlspecialchars($_POST['txt_nama']);
     $txt_username = htmlspecialchars($_POST['txt_username']);
     $txt_password = htmlspecialchars($_POST['txt_password']);
-    $txt_repeatpassword = htmlspecialchars($_POST['txt_repeatpassword']);
-    if ($txt_password==$txt_repeatpassword){
-        $query =  mysqli_query($koneksi, "INSERT INTO `register` (`nama`, `ussername`, `password`) VALUES ('$txt_nama', '$txt_username', '$txt_password');");
+    $sql = mysqli_query($koneksi, "INSERT INTO `penjual` (`id_penjual`, `email`, `password_penjual`, `nama_penjual`, `jenis_kelamin`, `id_alamat`, `no_telp`, `profil_penjual`) VALUES (NULL,'$txt_username', '$txt_password', '$txt_nama', NULL, NULL, NULL);");
+    if ($koneksi->query($sql) === TRUE) {
         echo "<script> alert('berhasil');
-            document.location='login.php';
-                        </script>";
-
-
-    }else{
-        echo"password tidak sama";
-    }
+        document.location='home.php';
+        </script>";
+      } else {
+        echo "<script> alert('berhasil');
+        document.location='home.php';
+        </script>";
+      }
 
         }
         ?>
