@@ -63,7 +63,7 @@ require "koneksi.php"
                     $username = htmlspecialchars($_POST['username']);
                     $password = htmlspecialchars($_POST['password']);
 
-                    $sql =  mysqli_query($koneksi, "SELECT * FROM register WHERE ussername='$username' and password='$password'");
+                    $sql =  mysqli_query($koneksi, "SELECT * FROM penjual WHERE email='$username' and password_penjual='$password'");
                     $cek = mysqli_num_rows($sql);
                     if($cek > 0) {
                         $_SESSION['username'] = $_POST['username'];
