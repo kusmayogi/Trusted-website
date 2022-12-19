@@ -24,28 +24,28 @@ require ('koneksi.php');
         <!-- menampilkan navbar -->
         <div class="menu-items">
             <ul class="nav-links nav-link collapsed nav nav-pills">
-              <li><a href="home_page.html">
-                  <i class="fa fa-solid fa-house" style="font-size:20px;"></i>
+              <li><a href="home.php">
+              <i class="uil uil-estate link"></i>
                       <span class="link-name">Home</span>
                   </a></li>
               <li><a href="product.html">
-                  <i class="fas fa-solid fa-chart-simple" style="font-size:20px;"></i>
+              <i class="uil uil-chart"></i>
                       <span class="link-name">Performa Toko</span>
                   </a></li>
               <li><a href="#">
-                  <i class="fas fa-truck" style="font-size:20px;"></i>
+              <i class="uil uil-message"></i>
                       <span class="link-name">Pengiriman</span>
                   </a></li>
               <li><a href="data_barang.php">
-                  <i class="fas fa-solid fa-pen-to-square" style="font-size:20px;"></i>
+              <i class="uil uil-edit"></i>
                       <span class="link-name">Data Barang</span>
                   </a></li>
               <li><a href="#">
-                  <i class="fas fa-solid fa-file-lines" style="font-size:20px;"></i>
+              <i class="uil uil-file-info-alt"></i>
                       <span class="link-name">Laporan</span>
                   </a></li>
                 <li><a href="akun.php">
-                  <i class="fas fa-user" style="font-size:20px;"></i>
+                <i class="uil uil-user"></i>
                       <span class="link-name">Akun</span>
                   </a></li>
               <!-- Nav Item - Akun Collapse Menu -->
