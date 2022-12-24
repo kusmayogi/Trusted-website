@@ -22,7 +22,7 @@ require "koneksi.php"
     <div class="container text-center">   
         <div class="row">
           <div class="col">
-          <img src="image/gbr_login1.png" class="img-fluid" large="100">
+          <img src="image/login.jpg" class="img-fluid" large="100">
             <div class="container text-center">
                 <!-- <div class="col"> -->
                 <div class="row"> 
@@ -41,13 +41,18 @@ require "koneksi.php"
     <div>
         <form action="login.php" method="post">		
             <div class="container-fluid">
-                <div class="row mt-4">
-                <div class="col">
-                <td><input type="text" placeholder="Username" class="form-control rounded-pill" name="username"required></td>
+            <div class="row mt-4">
+                <div class="col-9">
+                <td></td>
                 </div> 
-                <div class="row mt-2">
-                <td><input type="password" placeholder="password" class="form-control rounded-pill" name="password"required></td>
-                </div>
+                <div class="row mt-3">
+                <div class="col-10">
+                <td><input placeholder="Username" type="email" class="form-control rounded-pill" name="username" required></td>
+                <div class="mt-3">
+                <td><input type="password" placeholder="Password" class="form-control rounded-pill" name="password" required></td>
+                </div> 
+                </div>   
+            </div>
                 <div class="row mt-4">
                     <button class="btn btn-danger" name="login"> Login </button>
                     </div>
