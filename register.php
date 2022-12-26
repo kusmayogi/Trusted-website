@@ -92,7 +92,7 @@ if(isset($_POST['register'])){
     <?php  }else{
         $sql_insert =  mysqli_query($koneksi, "INSERT INTO `penjual` (`nama_penjual`, `email`, `password_penjual`) VALUES ('$txt_nama', '$txt_username', '$txt_password');");
         if($sql_insert){
-            ?><script> alert('Registrasi berhasil silakan login brutal');
+            ?><script> alert('Registrasi berhasil silakan login');
             document.location='login.php';
             </script><?php
         }
