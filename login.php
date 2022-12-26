@@ -54,7 +54,7 @@ require "koneksi.php"
                 </div>   
             </div>
                 <div class="row mt-4">
-                    <button class="btn btn-danger" name="login"> Login </button>
+                    <button class="btn btn-danger rounded-pill" name="login"> Login </button>
                     </div>
                 </div>
             <div class="text-center">

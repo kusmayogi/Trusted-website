@@ -633,7 +633,7 @@ body {
 }
 .search_div{
   position:absolute;
-  background: #2d3239;
+  background: rgb(70, 70, 70);
   height: 40px;
   border-radius: 30px;
   padding: 10px;
@@ -644,7 +644,7 @@ body {
   outline: none;
   float: left;
   padding: 0;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   transition: 0.4s;
   line-height: 25px;
@@ -658,7 +658,7 @@ body {
   width: 30px;
   height:25px;
   border-radius: 50%;
-  background: #2d3239;
+  background:  rgb(70, 70, 70);
   transition: 0.4s;
   text-decoration: none;
 }
@@ -671,16 +671,6 @@ body {
   background: rgb(70, 70, 70);
 }
 /* search bar */
-body{
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font: consolas;
-}
 .container{
   width: 1000px;
   position: relative;

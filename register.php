@@ -47,7 +47,7 @@ require "koneksi.php"
                             <div class="mt-4">
                             <form action="register.php" method="POST">
                                 <div class="form-group row mb-3">
-                                    <div class="col mb-3">
+                                    <div class="col">
                                         <input type="text" class="form-control rounded-pill" id="FirstName"
                                             placeholder="Nama" name="txt_nama"required>
                                     </div>
@@ -64,8 +64,8 @@ require "koneksi.php"
                                 </div>
                                 
                     <div class="form-group mt-3">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                    <td><button class="btn btn-danger" name="submit"> Daftar </button></td>
+                    <div class="row mt-1">
+                    <td><button class="btn btn-danger rounded-pill" name="register"> Daftar </button></td>
                     </div>
                     </div>
 
@@ -82,21 +82,21 @@ require "koneksi.php"
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
   </html>
-<?php
-if(isset($_POST['submit'])){
-    $txt_nama = htmlspecialchars($_POST['txt_nama']);
-    $txt_username = htmlspecialchars($_POST['txt_username']);
-    $txt_password = htmlspecialchars($_POST['txt_password']);
-    $sql = mysqli_query($koneksi, "INSERT INTO `penjual` (`id_penjual`, `email`, `password_penjual`, `nama_penjual`, `jenis_kelamin`, `id_alamat`, `no_telp`, `profil_penjual`) VALUES (NULL,'$txt_username', '$txt_password', '$txt_nama', NULL, NULL, NULL);");
-    if ($koneksi->query($sql) === TRUE) {
-        echo "<script> alert('berhasil');
-        document.location='home.php';
-        </script>";
-      } else {
-        echo "<script> alert('berhasil');
-        document.location='home.php';
-        </script>";
-      }
+  <?php
+if(isset($_POST['register'])){
+    $txt_nama =$_POST['txt_nama'];
+    $txt_username =$_POST['txt_username'];
+    $txt_password = $_POST['txt_password'];
+    if ($txt_nama == ''|| $txt_username == ''|| $txt_password ==''){?>
+<script type="text/javascript">alert('Data tidak boleh kosong');</script>
 
+    <?php  }else{
+        $sql_insert =  mysqli_query($koneksi, "INSERT INTO `penjual` (`nama_penjual`, `email`, `password_penjual`) VALUES ('$txt_nama', '$txt_username', '$txt_password');");
+        if($sql_insert){
+            ?><script> alert('Registrasi berhasil silakan login brutal');
+            document.location='login.php';
+            </script><?php
         }
-        ?>
+    }
+}
+     ?>  
