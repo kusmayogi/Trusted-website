@@ -89,7 +89,6 @@ if(isset($_POST['register'])){
     $txt_password = $_POST['txt_password'];
     if ($txt_nama == ''|| $txt_username == ''|| $txt_password ==''){?>
 <script type="text/javascript">alert('Data tidak boleh kosong');</script>
-
     <?php  }else{
         $sql_insert =  mysqli_query($koneksi, "INSERT INTO `penjual` (`nama_penjual`, `email`, `password_penjual`) VALUES ('$txt_nama', '$txt_username', '$txt_password');");
         if($sql_insert){
