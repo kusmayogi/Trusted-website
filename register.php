@@ -93,8 +93,8 @@ if(isset($_POST['submit'])){
         document.location='home.php';
         </script>";
       } else {
-        echo "<script> alert('berhasil');
-        document.location='home.php';
+        echo "<script> alert('gagal');
+        document.location='login.php';
         </script>";
       }
 
