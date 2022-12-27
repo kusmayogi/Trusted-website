@@ -12,8 +12,8 @@ if (isset($_POST['bupdate'])){
   $stok_barang = $_POST['txt_stok'];
   $deskripsi_barang = $_POST['txt_deskripsi'];
 
-  $nama_file = $_FILES ['gbr_produk']['name'];
-  $source = $_FILES ['gbr_produk']['tmp_name'];
+  $nama_file = $_FILES ['gambar_barang']['name'];
+  $source = $_FILES ['gambar_barang']['tmp_name'];
   $folder = 'image/';
 
   move_uploaded_file($source, $folder.$nama_file);

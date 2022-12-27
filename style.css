@@ -763,4 +763,21 @@ body {
 .form-input .image-preview .image-preview__image {
   display: none;
   width: 100%;
+
+}
+.form-input .file-input {
+  display: flex;
+  height: 72px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  color: dimgray;
+  border: 1.8px dashed #E0E0E0;
+  cursor: pointer;
 }

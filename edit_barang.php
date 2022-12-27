@@ -40,46 +40,19 @@ require ('koneksi.php');
 <form method="POST" action="update_barang.php" enctype="multipart/form-data">
     <div class="container-fluid">
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Ubah Gambar</label>
-      <input type="file" name="gbr_produk" class="form-control" id="exampleFormControlInput1" required="">
-      <section class="upload.php"></section>
-      <div class="image-preview" id="imagePreview">
-          <img src="" alt="Image Preview" class="image-preview__image">
-          <span class="image-preview__default-text">Image Preview</span>
-        </div>
-
-        <script>
-          const inpFile = document.getElementById("exampleFormControlInput1");
-          const previewContainer = document.getElementById("imagePreview");
-          const previewImage = previewContainer.querySelector(".image-preview__image");
-          const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
-
-          inpFile.addEventListener("change", function() {
-            const file = this.files[0];
-
-            if (file) {
-              const reader = new FileReader();
-
-              previewDefaultText.style.display = "none";
-              previewImage.style.display = "block";
-
-              reader.addEventListener("load", function() {
-                console.log(this);
-                previewImage.setAttribute("src", this.result);
-              });
-
-              reader.readAsDataURL(file);
-            }
-          });
-        </script>
+    <input class="file-input" type="file" id="gambar_barang" required="" name="gambar_barang" value="<?php echo $gambar_barang; ?>">
+                <section class="upload.php"></section>
+                <div class="image-preview mt-2">
+                <img src="image/<?php echo $gambar_barang; ?>" alt="" id="imgedit" style="height: 200px; width: 200px; object-fit: cover; border-radius: 2px;">
+                </div>
+                <script>
+                    document.getElementById("gambar_barang").onchange = function() {
+                        document.getElementById("imgedit").src = URL.createObjectURL(gambar_barang.files[0]);
+                        
+                    }
+                </script>
     </div>
-    <!-- <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Id Barang</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_id" value="<?php echo $data['id_barang']; ?>" placeholder="123xxxxxxx" readonly>
-    </div> -->
-
     <input type="hidden" class="form-control" name="txt_idbarang" value="<?php echo $data['id_barang']; ?>">
-
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
       <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_nama" value="<?php echo $data['nama']; ?>" placeholder="Masukkan nama barang...">
