@@ -10,12 +10,11 @@ require "koneksi.php"
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
+    <link rel="stylesheet" href="home.css">
     <script src="https://kit.fontawesome.com/5be573901b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Data Barang</title>
-    <link rel="stylesheet" href="home.css">
-    <title>Data Barang</title>
+    
   
   </head>
   <body>
@@ -33,7 +32,7 @@ require "koneksi.php"
                   <i class="uil uil-estate link"></i>
                       <span class="link-name">Home</span>
                   </a></li>
-              <li><a href="product.html">
+              <li><a href="performa.php">
                   <i class="uil uil-chart"></i>
                       <span class="link-name">Performa Toko</span>
                   </a></li>
