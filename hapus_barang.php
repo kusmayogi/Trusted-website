@@ -5,7 +5,7 @@ require ('koneksi.php');
 $id = $_GET['id_barang'];
  
 // menghapus data dari database
-mysqli_query($koneksi,"DELETE FROM `barang` WHERE id_barang=$id");
+mysqli_query($koneksi,"DELETE FROM `barang` WHERE `barang`.'id_barang'=$id");
  
 // mengalihkan halaman kembali ke index.php
 echo "<script>
