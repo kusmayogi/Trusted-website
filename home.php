@@ -18,6 +18,21 @@ require "koneksi.php"
   
   </head>
   <body>
+  <?php
+            $query = mysqli_query($koneksi, "SELECT SUM(total_pembayaran) FROM transaksi WHERE year(curdate())");
+            $row = mysqli_fetch_array($query);
+            $jmlpengguna = $row['SUM(total_pembayaran)'];
+
+            $query1 = mysqli_query($koneksi, "SELECT COUNT(id_barang) FROM barang WHERE year(curdate())");
+            $row1 = mysqli_fetch_array($query1);
+            $jmlpengguna1 = $row1['COUNT(id_barang)'];
+
+            $query = mysqli_query($koneksi, "SELECT COUNT(id_transaksi) FROM transaksi WHERE year(curdate())");
+            $row = mysqli_fetch_array($query);
+            $jmlpengguna2 = $row['COUNT(id_transaksi)'];
+
+
+            ?>
     <!-- tampilan navbar -->
     <nav>
         <!-- menampilkan logo -->
@@ -73,40 +88,40 @@ require "koneksi.php"
             <button type="button" class="btn btn-light"><img src="lutpi1.png" alt="">  Toko Bang Lutfi</button>
         </div>
         <div class="row">
-        <div class="col-4">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Pesanan Hari Ini</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pesanan Hari Ini</h5>
+                        <span class="number"><?php echo $jmlpengguna2 ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pemasukan Hari Ini</h5>
+                        <span class="number"><?php echo $jmlpengguna ?></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Pemasukan Hari Ini</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <div class="row mt-3">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Produk Terjual Bulan Ini</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-<div class="row mt-3">
-        <div class="col-4">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Produk Terjual Bulan Ini</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Jumlah Produk</h5>
+                        <span class="number"><?php echo $jmlpengguna1 ?></span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Jumlah Produk</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            </div>
-        </div>
-        </div>
         <div class="col">
         <table class="table">
   <thead>
