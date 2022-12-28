@@ -18,6 +18,17 @@ require "koneksi.php"
   
   </head>
   <body>
+  <?php
+$query = mysqli_query($koneksi, "SELECT max(id_barang) as idTerbesar FROM barang");
+                                $data = mysqli_fetch_array($query);
+                                $idBarang = $data['idTerbesar'];
+                        
+                                $urutan = (int) substr($idBarang, 3, 3);
+                                $urutan++;
+                        
+                                $huruf = "IB";
+                                $idBarang = $huruf . sprintf("%02s", $urutan);
+                                ?>
     <!-- tampilan navbar -->
     <nav>
         <!-- menampilkan logo -->
@@ -133,7 +144,13 @@ require "koneksi.php"
             }
           });
         </script>
+        
     </div>
+    <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Id Barang</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_id"
+                            value="<?php echo $idBarang ?>" readonly>
+                        </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
       <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_nama" placeholder="masukan nama barang...">
