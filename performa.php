@@ -107,6 +107,11 @@ require "koneksi.php"
                     }
                 });
             </script>
+            <?php
+            $query1 = mysqli_query($koneksi, "SELECT COUNT(id_transaksi) FROM transaksi WHERE year(curdate())");
+            $row1 = mysqli_fetch_array($query1);
+            $jmlpengguna1 = $row1['COUNT(id_transaksi)'];
+            ?>
              <div class="row mt-2">
         <div class="col-4">
         <div class="card" style="width: 18rem;">
@@ -119,8 +124,8 @@ require "koneksi.php"
     <div class="col">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Pemasukan Hari Ini</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <h5 class="card-title">Pesanan Bulan Ini</h5>
+              <span class="number"><?php echo $jmlpengguna1 ?></span>
             </div>
         </div>
     </div>
