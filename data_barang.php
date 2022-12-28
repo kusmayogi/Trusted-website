@@ -153,15 +153,15 @@ $query = mysqli_query($koneksi, "SELECT max(id_barang) as idTerbesar FROM barang
                         </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_nama" placeholder="masukan nama barang...">
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_nama" placeholder="masukan nama barang..." required="">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Warna</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_warna" placeholder="masukan warna...">
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_warna" placeholder="masukan warna..." required="">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Ukuran</label>
-      <select class="form-select" name="txt_ukuran" aria-label="Default select example">
+      <select class="form-select" name="txt_ukuran" aria-label="Default select example" required="">
   <option selected>Pilih Ukuran...</option>
   <option value="S">S</option>
   <option value="M">M</option>
@@ -172,19 +172,19 @@ $query = mysqli_query($koneksi, "SELECT max(id_barang) as idTerbesar FROM barang
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Kategori</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_kategori" placeholder="baju, hoodie, sepatu, etc">
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_kategori" placeholder="baju, hoodie, sepatu, etc" required="">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Harga Beli</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaBeli" placeholder="masukan harga beli barang">
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaBeli" placeholder="masukan harga beli barang" required="">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Harga Jual</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaJual" placeholder="masukan harga jual barang">
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_hargaJual" placeholder="masukan harga jual barang" required="">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Stok</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_stok" placeholder="stok barang anda">
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_stok" placeholder="stok barang anda" required="">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Deskripsi</label>
