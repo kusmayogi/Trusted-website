@@ -14,7 +14,7 @@ $txt_deskripsi = htmlspecialchars($_POST['txt_deskripsi']);
 if (isset($_POST['bsimpan'])){
     $simpan = mysqli_query($koneksi, "INSERT INTO `barang` (`gambar`, `id_barang`, `nama`, `warna`, `ukuran`, `kategori`, `harga_beli`, `harga_jual`, `stok`, `deskripsi`) 
     VALUES ('$gbr_produk', '$txt_id', '$txt_nama', '$txt_warna', '$txt_ukuran', '$txt_kategori', '$txt_hargaBeli', '$txt_hargaJual', '$txt_stok', '$txt_deskripsi');");
-    move_uploaded_file($ganti,'A1_Project/',$gbr_produk);
+    move_uploaded_file($ganti,'image/'.$gbr_produk);
     if ($simpan){
         echo "<script> alert('Data Berhasil Ditambahkan!');
         document.location='data_barang.php';
