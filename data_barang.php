@@ -47,25 +47,21 @@ $query = mysqli_query($koneksi, "SELECT max(id_barang) as idTerbesar FROM barang
                   <i class="uil uil-chart"></i>
                       <span class="link-name">Performa Toko</span>
                   </a></li>
-              <li><a href="#">
+              <li><a href="pengiriman.php">
                   <i class="uil uil-message"></i>
                       <span class="link-name">Pengiriman</span>
                   </a></li>
-              <li><a href="data_barang.php" class="rounded-pill" style="background-color: #FF69B4;">
+              <li><a href="data_barang.php"   class="rounded-pill" style="background-color: #FF69B4;">
                   <i class="uil uil-edit"></i>
                       <span class="link-name">Data Barang</span>
                   </a></li>
-              <li><a href="#">
+              <li><a href="laporan.php">
                   <i class="uil uil-file-info-alt"></i>
                       <span class="link-name">Laporan</span>
                   </a></li>
               <li><a href="akun.php">
                   <i class="uil uil-user"></i>
                       <span class="link-name">Akun</span>
-                  </a></li>
-              <li><a href="login.php">
-                  <i class="uil uil-sign-out-alt"></i>
-                      <span class="link-name">Logout</span>
                   </a></li>
             </ul>
         </div>
