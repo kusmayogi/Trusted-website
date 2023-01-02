@@ -47,20 +47,16 @@ require "koneksi.php"
                             <div class="mt-4">
                             <form action="register.php" method="POST">
                                 <div class="form-group row mb-3">
-                                    <div class="col">
-                                        <input type="text" class="form-control rounded-pill" id="FirstName"
-                                            placeholder="Nama" name="txt_nama"required>
-                                    </div>
+                                    <input type="text" class="form-control rounded-pill" id="FirstName"
+                                        placeholder="Nama" name="txt_nama"required>
                                 </div>
-                                <div class="form-group mt-3">
+                                <div class="form-group row mt-3">
                                     <input type="email" class="form-control form-control-user rounded-pill" id="InputUssername"
                                         placeholder="Ussername" name="txt_username"required>
                                 </div>
                                 <div class="form-group row mt-3">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user rounded-pill"
-                                            id="InputPassword" placeholder="Password" name="txt_password" required>
-                                </div>
+                                    <input type="password" class="form-control form-control-user rounded-pill"
+                                        id="InputPassword" placeholder="Password" name="txt_password" required>
                                 </div>
                                 
                     <div class="form-group mt-3">
@@ -72,7 +68,7 @@ require "koneksi.php"
                             </form> 
                                
                                 <div class="text-center">
-                                <p class="small text-muted fz-13">Sudah mempunyai akun? <a href="login.php"> Login Sekarang!</a></p>
+                                <p class="small text-muted fz-13 mt-3">Sudah mempunyai akun? <a href="login.php"> Login Sekarang!</a></p>
                             </div>
                         </div>
                     </tr>

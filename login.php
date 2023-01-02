@@ -58,7 +58,7 @@ require "koneksi.php"
                     </div>
                 </div>
             <div class="text-center">
-                <p class="small text-muted fz-13">Sudah mempunyai akun? <a href="register.php" class="link-secondary"> Daftar Sekarang</a></p>
+                <p class="small text-muted fz-13 mt-3">Sudah mempunyai akun? <a href="register.php" class="link-secondary"> Daftar Sekarang</a></p>
             </div>
         </form>
     </div> 
