@@ -30,7 +30,7 @@ require ('koneksi.php');
                         <i class="uil uil-estate"></i>
                         <span class="link-name">Home</span>
                     </a></li>
-                <li><a href="product.html">
+                <li><a href="performa.php">
                         <i class="uil uil-chart"></i>
                         <span class="link-name">Performa Toko</span>
                     </a></li>
@@ -38,7 +38,7 @@ require ('koneksi.php');
                         <i class="uil uil-message" style="color: black ;"></i>
                         <span class="link-name" style="color: black;">Pengiriman</span>
                     </a></li>
-                <li><a href="newww.php">
+                <li><a href="data_barang.php">
                         <i class="uil uil-edit"></i>
                         <span class="link-name">Data Barang</span>
                     </a></li>
