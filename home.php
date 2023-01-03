@@ -41,10 +41,6 @@ require "koneksi.php"
                         <i class="uil uil-file-info-alt"></i>
                         <span class="link-name">Laporan</span>
                     </a></li>
-                <li><a href="akun.php">
-                        <i class="uil uil-user"></i>
-                        <span class="link-name">Akun</span>
-                    </a></li>
             </ul>
         </div>
     </nav>
@@ -99,8 +95,6 @@ require "koneksi.php"
             $query = mysqli_query($koneksi, "SELECT COUNT(id_barang) FROM transaksi WHERE month(curdate())");
             $row = mysqli_fetch_array($query);
             $jmlpengguna3 = $row['COUNT(id_barang)'];
-
-
             ?>
 
         </div>
@@ -149,7 +143,8 @@ require "koneksi.php"
                         </tr>
                     </thead>
                     <?php
-                    $tampil = mysqli_query($koneksi, "SELECT barang.nama, transaksi.tgl_transaksi FROM barang, transaksi WHERE barang.id_barang=transaksi.id_barang;");
+                    $tampil = mysqli_query($koneksi, "SELECT barang.nama, transaksi.tgl_transaksi 
+                    FROM barang, transaksi WHERE barang.id_barang=transaksi.id_barang;");
                     if (mysqli_num_rows($tampil)) {
                         while ($data = mysqli_fetch_array($tampil)) {
                     ?>
@@ -159,13 +154,10 @@ require "koneksi.php"
                                     <td><?= $data['tgl_transaksi'] ?></td>
                                 </tr>
                         <?php }
-                    } else {
-                        echo '<tr><td colspan="11">Data Yang Dicari Tidak Ada...</td></tr>';
                     } ?>
                             </tbody>
                 </table>
             </div>
-
         </div>
 
         <div class="row mt-4">
