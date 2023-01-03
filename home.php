@@ -13,38 +13,38 @@ require "koneksi.php"
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Trusted: Login</title>
     <nav>
-        <!-- menampilkan logo -->
-        <div  class="logo-name">
-            <img src="image/gbr_logo1.png" width="200">
+        <!-- Logo Navbar-->
+        <div class="logo-image">
+            <img src="image/gbr_logo.png" width="200">
         </div>
 
-        <!-- menampilkan navbar -->
+        <!-- navbar -->
         <div class="menu-items">
-            <ul class="nav-links nav-link collapsed">
-              <li><a href="home.php"  class="rounded-pill" style="background-color: #FF69B4;">
-                  <i class="uil uil-estate link"></i>
-                      <span class="link-name">Home</span>
-                  </a></li>
-              <li><a href="performa.php">
-                  <i class="uil uil-chart"></i>
-                      <span class="link-name">Performa Toko</span>
-                  </a></li>
-              <li><a href="pengiriman.php">
-                  <i class="uil uil-message"></i>
-                      <span class="link-name">Pengiriman</span>
-                  </a></li>
-              <li><a href="data_barang.php">
-                  <i class="uil uil-edit"></i>
-                      <span class="link-name">Data Barang</span>
-                  </a></li>
-              <li><a href="laporan.php">
-                  <i class="uil uil-file-info-alt"></i>
-                      <span class="link-name">Laporan</span>
-                  </a></li>
-              <li><a href="akun.php">
-                  <i class="uil uil-user"></i>
-                      <span class="link-name">Akun</span>
-                  </a></li>
+            <ul class="nav-links nav-link collapsed nav-pills">
+                <li><a href="home.php" class="rounded-pill" style="background-color: #C52A81;">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Home</span>
+                    </a></li>
+                <li><a href="performa.php">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Performa Toko</span>
+                    </a></li>
+                <li><a href="pengiriman.php" >
+                        <i class="uil uil-message" style="color: black ;"></i>
+                        <span class="link-name" style="color: black;">Pengiriman</span>
+                    </a></li>
+                <li><a href="data_barang.php">
+                        <i class="uil uil-edit"></i>
+                        <span class="link-name">Data Barang</span>
+                    </a></li>
+                <li><a href="laporan.php">
+                        <i class="uil uil-file-info-alt"></i>
+                        <span class="link-name">Laporan</span>
+                    </a></li>
+                <li><a href="akun.php">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">Akun</span>
+                    </a></li>
             </ul>
         </div>
     </nav>
