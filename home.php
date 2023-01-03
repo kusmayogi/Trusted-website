@@ -144,22 +144,18 @@ require "koneksi.php"
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Id Produk</th>
                             <th scope="col">Nama</th>
-                            <th scope="col">Id Transaksi Produk</th>
                             <th scope="col">Tanggal</th>
                         </tr>
                     </thead>
                     <?php
-                    $tampil = mysqli_query($koneksi, "SELECT barang.id_barang, barang.nama, transaksi.id_transaksi, transaksi.tgl_transaksi FROM barang, transaksi WHERE barang.id_barang=transaksi.id_barang;");
+                    $tampil = mysqli_query($koneksi, "SELECT barang.nama, transaksi.tgl_transaksi FROM barang, transaksi WHERE barang.id_barang=transaksi.id_barang;");
                     if (mysqli_num_rows($tampil)) {
                         while ($data = mysqli_fetch_array($tampil)) {
                     ?>
                             <tbody>
                                 <tr>
-                                    <td><?= $data['id_barang'] ?></td>
                                     <td><?= $data['nama'] ?></td>
-                                    <td><?= $data['id_transaksi'] ?></td>
                                     <td><?= $data['tgl_transaksi'] ?></td>
                                 </tr>
                         <?php }
