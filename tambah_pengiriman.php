@@ -43,26 +43,27 @@ require ('koneksi.php');
     $idPengiriman = $huruf . sprintf("%03s", $urutan);
     ?>
 
+    <!-- tampilan navbar -->
     <nav>
-        <!-- Logo Navbar-->
-        <div class="logo-image">
-            <img src="image/gbr_logo.png" width="200">
+        <!-- menampilkan logo -->
+        <div class="logo-name">
+            <img src="image/gbr_logo1.png" width="200">
         </div>
 
-        <!-- navbar -->
+        <!-- menampilkan navbar -->
         <div class="menu-items">
-            <ul class="nav-links nav-link collapsed nav-pills">
-                <li><a href="home.php">
-                        <i class="uil uil-estate"></i>
+            <ul class="nav-links nav-link collapsed">
+                <li><a href="home.php" >
+                        <i class="uil uil-estate link"></i>
                         <span class="link-name">Home</span>
                     </a></li>
-                <li><a href="product.html">
+                <li><a href="performa.php">
                         <i class="uil uil-chart"></i>
                         <span class="link-name">Performa Toko</span>
                     </a></li>
-                <li><a href="pengiriman.php" class="rounded-pill" style="background-color: #C52A81;">
-                        <i class="uil uil-message" style="color: black ;"></i>
-                        <span class="link-name" style="color: black;">Pengiriman</span>
+                <li><a href="pengiriman.php" class="rounded-pill" style="background-color: #FF69B4;">
+                        <i class="uil uil-message"></i>
+                        <span class="link-name">Pengiriman</span>
                     </a></li>
                 <li><a href="data_barang.php">
                         <i class="uil uil-edit"></i>
@@ -74,28 +75,25 @@ require ('koneksi.php');
                     </a></li>
                 <li><a href="akun.php">
                         <i class="uil uil-user"></i>
-                        <span class="link-name">Akun</span>
+                        <span class="link-name">About</span>
                     </a></li>
+                <li><a href="login.php">
+                        <i class="uil uil-arrow-right"></i>
+                        <span class="link-name">Log Out</span>
+                    </a></li>
+
             </ul>
         </div>
     </nav>
 
     <!-- <div class="content-wrapper master"> -->
-    <div class="top">
-        <div class="box box-primary mt-3">
-            <div class="notifications" style="text-align: right;">
-                <i class="uil uil-bell"></i>
-                <a href="login.php"><img src="image/lutpi.png" alt=""><span class="link-name">Toko Bang Lutfi</span></a>
-            </div>
-        </div>
-    </div>
-
+   
     <section class="content dashboard">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-20">
                     <div class="card">
-                        <div class="card-header" style="background-color: #C52A81;">
+                        <div class="card-header" style="background-color: #FF69B4;">
                             <h4 class="mt-2" style="font-weight: bold;"><a href="pengiriman.php">
                                     <i class="uil uil-step-backward-circle" style="color: black;"></i></a> Form
                             Pengiriman</h4>

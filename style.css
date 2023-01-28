@@ -781,3 +781,8 @@ body {
   border: 1.8px dashed #E0E0E0;
   cursor: pointer;
 }
+@media print{
+  .menu-items, .mulai, .selesai{
+    display: none;
+  }
+}
