@@ -8,119 +8,53 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <script src="https://kit.fontawesome.com/5be573901b.js" crossorigin="anonymous"></script>
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="style.css">
-    <title>Akun</title>
-</head>
-<body>
-<nav>
-        <!-- Logo Navbar-->
-        <div class="logo-image">
-            <img src="image/gbr_logo.png" width="200">
-        </div>
-
-        <!-- navbar -->
-        <div class="menu-items">
-            <ul class="nav-links nav-link collapsed nav-pills">
-            <li><a href="home.php">
-                    <i class="uil uil-estate"></i>
-                        <span class="link-name">Home</span>
-                    </a></li>
-                <li><a href="product.html">
-                    <i class="uil uil-chart"></i>
-                        <span class="link-name">Performa Toko</span>
-                    </a></li>
-                <li><a href="pengiriman.php">
-                    <i class="uil uil-message"></i>
-                        <span class="link-name">Pengiriman</span>
-                    </a></li>
-                <li><a href="">
-                    <i class="uil uil-edit"></i>
-                        <span class="link-name">Data Barang</span>
-                    </a></li>
-                <li><a href="laporan.php">
-                    <i class="uil uil-file-info-alt"></i>
-                        <span class="link-name">Laporan</span>
-                    </a></li>
-                <li><a href="akun.php">
-                    <i class="uil uil-user"></i>
-                        <span class="link-name">Akun</span>
-                    </a></li>
-                    <!-- Nav Item - Akun Collapse Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" href="#">
-                            <i class="fas fa-user-gear" style="font-size:20px;"></i>
-                            <span class="link-name">Akun Saya</span>
-                        </a>
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" href="#">
-                            <i class="fas fa-solid fa-bars" style="font-size:20px;"></i>
-                            <span class="link-name">Tentang Kami</span>
-                        </a>
-=======
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Akun</title>
 </head>
 <body>
     <!-- tampilan navbar -->
     <nav>
         <!-- menampilkan logo -->
-        <div  class="logo-name">
+        <div class="logo-name">
             <img src="image/gbr_logo1.png" width="200">
         </div>
 
         <!-- menampilkan navbar -->
         <div class="menu-items">
-            <ul class="nav-links nav-link collapsed nav nav-pills">
-              <li><a href="home_page.html">
-                  <i class="fa fa-solid fa-house" style="font-size:20px;"></i>
-                      <span class="link-name">Home</span>
-                  </a></li>
-              <li><a href="product.html">
-                  <i class="fas fa-solid fa-chart-simple" style="font-size:20px;"></i>
-                      <span class="link-name">Performa Toko</span>
-                  </a></li>
-              <li><a href="#">
-                  <i class="fas fa-truck" style="font-size:20px;"></i>
-                      <span class="link-name">Pengiriman</span>
-                  </a></li>
-              <li><a href="data_barang.php">
-                  <i class="fas fa-solid fa-pen-to-square" style="font-size:20px;"></i>
-                      <span class="link-name">Data Barang</span>
-                  </a></li>
-              <li><a href="#">
-                  <i class="fas fa-solid fa-file-lines" style="font-size:20px;"></i>
-                      <span class="link-name">Laporan</span>
-                  </a></li>
-                <li><a href="akun.php" class="rounded-pill" style="background-color: #C52A81;">
-                  <i class="fas fa-user" style="color: white; font-size:20px;"></i>
-                      <span class="link-name text-white">Akun</span>
-                  </a></li>
-              <!-- Nav Item - Akun Collapse Menu -->
-              <li class="nav-item">
-                <a class="nav-link collapsed" href="akun_saya.php" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-user-gear" style="font-size:20px;"></i>
-                    <span class="link-name">Akun Saya</span>
-                </a>
-              <li class="nav-item">
-                <a class="nav-link collapsed" href="tentang_kami.php" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-solid fa-bars" style="font-size:20px;"></i>
-                    <span class="link-name">Tentang Kami</span>
-                </a>
-              <li><a href="login.php">
-                  <i class="fa-solid fa-right-from-bracket" style="font-size:20px;"></i>
-                      <span class="link-name">Logout</span>
-                  </a></li>
->>>>>>> Stashed changes
+            <ul class="nav-links nav-link collapsed">
+                <li><a href="home.php">
+                        <i class="uil uil-estate link"></i>
+                        <span class="link-name">Home</span>
+                    </a></li>
+                <li><a href="performa.php">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Performa Toko</span>
+                    </a></li>
+                <li><a href="pengiriman.php">
+                        <i class="uil uil-message"></i>
+                        <span class="link-name">Pengiriman</span>
+                    </a></li>
+                <li><a href="data_barang.php">
+                        <i class="uil uil-edit"></i>
+                        <span class="link-name">Data Barang</span>
+                    </a></li>
+                <li><a href="laporan.php" >
+                        <i class="uil uil-file-info-alt"></i>
+                        <span class="link-name">Laporan</span>
+                    </a></li>
+                <li><a href="akun.php">
+                        <i class="uil uil-user"></i>
+                        <span class="link-name">About</span>
+                    </a></li>
+                    <li><a href="login.php">
+                    <i class="uil uil-arrow-right"></i>
+                        <span class="link-name">Log Out</span>
+                    </a></li>
             </ul>
         </div>
     </nav>
-
     <section class="dashboard">
         <div class="top">
             <i></i>
@@ -130,38 +64,61 @@ session_start();
             </div>
             <a href="#"><img src="image/lutpi.png" alt=""><span class="link-name">Toko Bang Lutfi</span></a>
         </div> -->
-            <div class="information container-start">
-                <i class="fas fa-regular fa-bell" style="font-size:20px;"></i>
-                <a>Toko Bang Luthfi</a>
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php?></span>
-                <img class="img-profile rounded-circle" src="image/gbr_profile.png">
-            </div>
-        </div>
-
-        <!-- <div class="container-fluid"> -->
-            <div class="container-fluid mt-3">
-              <!-- <div class="row"> -->
-                <!-- <div class="col mb-3"> -->
-                    
-                    <p class="fs-1 fw-bold">&emsp;&emsp;Hai, Klien Trustedvers!</p>
-                    <p class="fs-6 fw-normal">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                        Yuk lengkapi isi data akun kamu, apabila terjadi kendala pada website ini</p>
-                    <p class="fs-6 fw-normal">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                        kamu dapat menghubungi kami dengan mengikuti berbagai sosial media</p>
-                    <p class="fs-6 fw-normal">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                        kami. Jangan sampai ketinggalan!!</p>
-                
-                    <div class="container text-center">
-                        <div class="col mt-3">
-                            <img src="image/gbr_akun.png" class="img-fluid" width="700px">
-                        </div>
-                    </div>
-                </div>
-              </div>
-            <!-- </div>    -->
-        </div>
+   
+       
     </section>
-
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js>"></script>
+    <h1 class="display-4">This Website Developed By:</h1>
+<div class="row mt-3">
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+  <img src="image/WhatsApp Image 2023-01-03 at 23.48.49.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">E41211622</h5>
+    <p class="card-text">Mochamad Luthfi Azhar</p>
+  </div>
+</div>
+    </div>
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+  <img src="image/WhatsApp Image 2023-01-04 at 00.27.24.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">E41211493</h5>
+    <p class="card-text">Endiening Nur Puspitasari</p>
+  </div>
+</div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+  <img src="image/WhatsApp Image 2023-01-04 at 10.54.18.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">E41211992</h5>
+    <p class="card-text">Fauzian Aqzal Hafidz</p>
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="row mt-3">
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+  <img src="image/WhatsApp Image 2023-01-04 at 10.54.19.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">E41211993</h5>
+    <p class="card-text">Ratih Dewi Setiani</p>
+  </div>
+</div>
+    </div>
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+  <img src="image/WhatsApp Image 2023-01-04 at 10.55.16.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">E41211296</h5>
+    <p class="card-text">Syailendra Kusmayogi Pratrama</p>
+  </div>
+</div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

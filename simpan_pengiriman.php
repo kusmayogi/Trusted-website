@@ -11,10 +11,8 @@ $status         = htmlspecialchars($_POST['txt_status']);
 $id_transaksi   = htmlspecialchars($_POST['txt_idTransaksi']);
 
 if (isset($_POST['bsimpan'])){
-    $simpan = mysqli_query($koneksi, "INSERT INTO `pengiriman` (`id_pengiriman`, `tanggal`, `pelanggan`,  
-    `ket_sistem`, `no_resi`, `keterangan`, `status`, `id_transaksi`) 
-    VALUES ('$id_pengiriman','$tanggal','$pelanggan','$ket_sistem','$no_resi','$keterangan','$status',
-    '$id_transaksi');") or die(mysqli_error($koneksi));
+    $simpan = mysqli_query($koneksi, "INSERT INTO `pengiriman` (`id_pengiriman`, `tanggal`, `pelanggan`,  `ket_sistem`, `no_resi`, `keterangan`, `status`, `id_transaksi`) 
+    VALUES ('$id_pengiriman','$tanggal','$pelanggan','$ket_sistem','$no_resi','$keterangan','$status','$id_transaksi');") or die(mysqli_error($koneksi));
     if ($simpan){
         echo "<script> alert('Data Berhasil Ditambahkan!');
         document.location='pengiriman.php';
@@ -22,4 +20,3 @@ if (isset($_POST['bsimpan'])){
     }
 }
 ?>
-

@@ -15,9 +15,7 @@ require "koneksi.php"
 
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 </head>
 
 <body>
@@ -47,59 +45,53 @@ require "koneksi.php"
                             <div class="mt-4">
                                 <form action="register.php" method="POST">
                                     <div class="form-group row mb-3">
-                                        <input type="text" class="form-control rounded-pill" id="FirstName"
-                                            placeholder="Nama Lengkap" name="txt_nama" required>
+                                        <input type="text" class="form-control rounded-pill" id="FirstName" placeholder="Nama" name="txt_nama" required>
                                     </div>
                                     <div class="form-group row mt-3">
-                                        <input type="email" class="form-control form-control-user rounded-pill"
-                                            id="InputUssername" placeholder="Ussername" name="txt_username" required>
+                                        <input type="email" class="form-control form-control-user rounded-pill" id="InputUssername" placeholder="Ussername" name="txt_username" required>
                                     </div>
                                     <div class="form-group row mt-3">
-                                        <input type="password" class="form-control form-control-user rounded-pill"
-                                            id="InputPassword" placeholder="Password" name="txt_password" required>
+                                        <input type="password" class="form-control form-control-user rounded-pill" id="InputPassword" placeholder="Password" name="txt_password" required>
                                     </div>
 
                                     <div class="form-group mt-3">
                                         <div class="row mt-1">
-                                            <td><button class="btn btn-danger rounded-pill" name="register"> Daftar
-                                                </button></td>
+                                            <div class="d-grid gap-2 col-6 mx-auto">
+                                                <td><button class="btn btn-danger rounded-pill" name="register"> Daftar </button></td>
+                                            </div>
                                         </div>
-                                    </div>
 
                                 </form>
 
                                 <div class="text-center">
-                                    <p class="small text-muted fz-13 mt-3">Sudah mempunyai akun? <a href="login.php">
-                                            Login Sekarang!</a></p>
+                                    <p class="small text-muted fz-13 mt-3">Sudah mempunyai akun? <a href="login.php"> Login Sekarang!</a></p>
                                 </div>
                             </div>
-                        </tr>
-                    </div>
+                    </tr>
+                </div>
             </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>
 <?php
-if(isset($_POST['register'])){
-    $txt_nama =$_POST['txt_nama'];
-    $txt_username =$_POST['txt_username'];
+if (isset($_POST['register'])) {
+    $txt_nama = $_POST['txt_nama'];
+    $txt_username = $_POST['txt_username'];
     $txt_password = $_POST['txt_password'];
-    if ($txt_nama == ''|| $txt_username == ''|| $txt_password ==''){?>
-<script type="text/javascript">
-    alert('Data tidak boleh kosong');
-</script>
-<?php  }else{
+    if ($txt_nama == '' || $txt_username == '' || $txt_password == '') { ?>
+        <script type="text/javascript">
+            alert('Data tidak boleh kosong');
+        </script>
+        <?php  } else {
         $sql_insert =  mysqli_query($koneksi, "INSERT INTO `penjual` (`nama_penjual`, `email`, `password_penjual`) VALUES ('$txt_nama', '$txt_username', '$txt_password');");
-        if($sql_insert){
-            ?><script>
-    alert('Registrasi berhasil silakan login');
-    document.location = 'login.php';
-</script><?php
-        }
-    }
-}
-     ?>
+        if ($sql_insert) {
+        ?><script>
+                alert('Registrasi berhasil silakan login');
+                document.location = 'login.php';
+            </script><?php
+                    }
+                }
+            }
+                        ?>
