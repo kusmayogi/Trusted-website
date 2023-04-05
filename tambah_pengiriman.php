@@ -104,7 +104,6 @@ require ('koneksi.php');
                         <!-- <form method="POST" action=""> -->
                         <div class="card-body">
                             <form method="POST" action="simpan_pengiriman.php">
-                                <!-- <input type="hidden" class="form-control" id="id" name="id" value="" > -->
                                 <div class="form-group mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">ID Pengiriman</label>
                                     <input type="text" class="form-control" id="exampleFormControlInput1" name="txt_idPengiriman" 
